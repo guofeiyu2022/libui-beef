@@ -22,7 +22,7 @@ class Program
         var o = scope UiInitOptions();
         var err = ui.UiInit(o);
         if (err != null) {
-            Console.Error.WriteLine("Error initializing libui-ng: {0}", err);
+            Console.Error.WriteLine("Error initializing libui-ng: {0}", scope String(err));
          	ui.UiFreeInitError(err);
         	return 1;
         }
