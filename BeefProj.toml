@@ -1,0 +1,15 @@
+FileVersion = 1
+
+[Project]
+Name = "libui-beef"
+TargetType = "BeefLib"
+StartupObject = "Program"
+DefaultNamespace = "libui-beef"
+
+[Configs.Debug.Win64]
+LibPaths = ["$(ProjectDir)/dist/libui.lib"]
+PostBuildCmds = ["CopyToDependents(\"$(ProjectDir)/dist/*.dll\")"]
+
+[Configs.Release.Win64]
+LibPaths = ["$(ProjectDir)/dist/libui.lib"]
+PostBuildCmds = ["CopyToDependents(\"$(ProjectDir)/dist/*.dll\")"]
