@@ -1,0 +1,7 @@
+FileVersion = 1
+Dependencies = {corlib = "*", libui-beef = "*"}
+
+[Project]
+Name = "hello-world"
+TargetType = "BeefGUIApplication"
+StartupObject = "hello_world.Program"
