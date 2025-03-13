@@ -47,19 +47,29 @@ namespace System.Collections.Concurrent
         }
 
         // Override TryGetValue method for thread safety
-        /*public new bool TryGetValue(TKey key, out TValue value)
-        {
-            _monitor.Enter();
-            var ret = base.TryGetValue(key, out value);
-            _monitor.Exit();
-            return ret;
-        }*/
-
         public new bool TryGetValue(TKey key, out TValue value)
         {
             using (_monitor.Enter())
             {
                 return base.TryGetValue(key, out value);
+            }
+        }
+
+        public bool TryRemove(TKey key, out TValue value)
+        {
+            Result<(TKey key, TValue value)> result;
+            using (_monitor.Enter())
+            {
+                result = base.GetAndRemove(key);
+            }
+            switch (result)
+            {
+            case .Ok(let val):
+                value = result.Value.value;
+                return true;
+            default:
+                value = default(TValue);
+                return false;
             }
         }
 

@@ -369,12 +369,9 @@ namespace libui
         {
             if (__Instance == null)
                 return;
+            NativeToManagedMap.TryRemove(__Instance, var _);
             if (__ownsNativeInstance)
                 Internal.Free(__Instance);
-            UiInitOptions managed;
-            if (__TryGetNativeToManagedMapping(__Instance, out managed))
-                __RecordNativeToManagedMapping(__Instance, null);
-
             __Instance = null;
         }
 
@@ -3632,12 +3629,9 @@ namespace libui
         {
             if (__Instance == null)
                 return;
+            NativeToManagedMap.TryRemove(__Instance, var _);
             if (__ownsNativeInstance)
                 Internal.Free(__Instance);
-            UiControl managed;
-            if (__TryGetNativeToManagedMapping(__Instance, out managed))
-                __RecordNativeToManagedMapping(__Instance, null);
-
             __Instance = null;
         }
 
@@ -3951,12 +3945,9 @@ namespace libui
         {
             if (__Instance == null)
                 return;
+            NativeToManagedMap.TryRemove(__Instance, var _);
             if (__ownsNativeInstance)
                 Internal.Free(__Instance);
-            UiAreaHandler managed;
-            if (__TryGetNativeToManagedMapping(__Instance, out managed))
-                __RecordNativeToManagedMapping(__Instance, null);
-
             __Instance = null;
         }
 
@@ -4149,12 +4140,9 @@ namespace libui
         {
             if (__Instance == null)
                 return;
+            NativeToManagedMap.TryRemove(__Instance, var _);
             if (__ownsNativeInstance)
                 Internal.Free(__Instance);
-            UiAreaDrawParams managed;
-            if (__TryGetNativeToManagedMapping(__Instance, out managed))
-                __RecordNativeToManagedMapping(__Instance, null);
-
             __Instance = null;
         }
 
@@ -4368,12 +4356,9 @@ namespace libui
         {
             if (__Instance == null)
                 return;
+            NativeToManagedMap.TryRemove(__Instance, var _);
             if (__ownsNativeInstance)
                 Internal.Free(__Instance);
-            UiDrawMatrix managed;
-            if (__TryGetNativeToManagedMapping(__Instance, out managed))
-                __RecordNativeToManagedMapping(__Instance, null);
-
             __Instance = null;
         }
 
@@ -4579,12 +4564,9 @@ namespace libui
         {
             if (__Instance == null)
                 return;
+            NativeToManagedMap.TryRemove(__Instance, var _);
             if (__ownsNativeInstance)
                 Internal.Free(__Instance);
-            UiDrawBrush managed;
-            if (__TryGetNativeToManagedMapping(__Instance, out managed))
-                __RecordNativeToManagedMapping(__Instance, null);
-
             __Instance = null;
         }
 
@@ -4862,12 +4844,9 @@ namespace libui
         {
             if (__Instance == null)
                 return;
+            NativeToManagedMap.TryRemove(__Instance, var _);
             if (__ownsNativeInstance)
                 Internal.Free(__Instance);
-            UiDrawBrushGradientStop managed;
-            if (__TryGetNativeToManagedMapping(__Instance, out managed))
-                __RecordNativeToManagedMapping(__Instance, null);
-
             __Instance = null;
         }
 
@@ -5055,12 +5034,9 @@ namespace libui
         {
             if (__Instance == null)
                 return;
+            NativeToManagedMap.TryRemove(__Instance, var _);
             if (__ownsNativeInstance)
                 Internal.Free(__Instance);
-            UiDrawStrokeParams managed;
-            if (__TryGetNativeToManagedMapping(__Instance, out managed))
-                __RecordNativeToManagedMapping(__Instance, null);
-
             __Instance = null;
         }
 
@@ -5272,12 +5248,9 @@ namespace libui
         {
             if (__Instance == null)
                 return;
+            NativeToManagedMap.TryRemove(__Instance, var _);
             if (__ownsNativeInstance)
                 Internal.Free(__Instance);
-            UiFontDescriptor managed;
-            if (__TryGetNativeToManagedMapping(__Instance, out managed))
-                __RecordNativeToManagedMapping(__Instance, null);
-
             __Instance = null;
         }
 
@@ -5462,12 +5435,9 @@ namespace libui
         {
             if (__Instance == null)
                 return;
+            NativeToManagedMap.TryRemove(__Instance, var _);
             if (__ownsNativeInstance)
                 Internal.Free(__Instance);
-            UiDrawTextLayoutParams managed;
-            if (__TryGetNativeToManagedMapping(__Instance, out managed))
-                __RecordNativeToManagedMapping(__Instance, null);
-
             __Instance = null;
         }
 
@@ -5646,12 +5616,9 @@ namespace libui
         {
             if (__Instance == null)
                 return;
+            NativeToManagedMap.TryRemove(__Instance, var _);
             if (__ownsNativeInstance)
                 Internal.Free(__Instance);
-            UiAreaMouseEvent managed;
-            if (__TryGetNativeToManagedMapping(__Instance, out managed))
-                __RecordNativeToManagedMapping(__Instance, null);
-
             __Instance = null;
         }
 
@@ -5889,12 +5856,9 @@ namespace libui
         {
             if (__Instance == null)
                 return;
+            NativeToManagedMap.TryRemove(__Instance, var _);
             if (__ownsNativeInstance)
                 Internal.Free(__Instance);
-            UiAreaKeyEvent managed;
-            if (__TryGetNativeToManagedMapping(__Instance, out managed))
-                __RecordNativeToManagedMapping(__Instance, null);
-
             __Instance = null;
         }
 
@@ -6080,12 +6044,9 @@ namespace libui
         {
             if (__Instance == null)
                 return;
+            NativeToManagedMap.TryRemove(__Instance, var _);
             if (__ownsNativeInstance)
                 Internal.Free(__Instance);
-            UiTableModelHandler managed;
-            if (__TryGetNativeToManagedMapping(__Instance, out managed))
-                __RecordNativeToManagedMapping(__Instance, null);
-
             __Instance = null;
         }
 
@@ -6303,12 +6264,9 @@ namespace libui
         {
             if (__Instance == null)
                 return;
+            NativeToManagedMap.TryRemove(__Instance, var _);
             if (__ownsNativeInstance)
                 Internal.Free(__Instance);
-            UiTableTextColumnOptionalParams managed;
-            if (__TryGetNativeToManagedMapping(__Instance, out managed))
-                __RecordNativeToManagedMapping(__Instance, null);
-
             __Instance = null;
         }
 
@@ -6445,12 +6403,9 @@ namespace libui
         {
             if (__Instance == null)
                 return;
+            NativeToManagedMap.TryRemove(__Instance, var _);
             if (__ownsNativeInstance)
                 Internal.Free(__Instance);
-            UiTableParams managed;
-            if (__TryGetNativeToManagedMapping(__Instance, out managed))
-                __RecordNativeToManagedMapping(__Instance, null);
-
             __Instance = null;
         }
 
@@ -6602,12 +6557,9 @@ namespace libui
         {
             if (__Instance == null)
                 return;
+            NativeToManagedMap.TryRemove(__Instance, var _);
             if (__ownsNativeInstance)
                 Internal.Free(__Instance);
-            UiTableSelection managed;
-            if (__TryGetNativeToManagedMapping(__Instance, out managed))
-                __RecordNativeToManagedMapping(__Instance, null);
-
             __Instance = null;
         }
 
