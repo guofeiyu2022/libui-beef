@@ -5,7 +5,7 @@ namespace hello_world;
 
 class Program
 {
-    static int32 onClosing(__IntPtr w, __IntPtr data)
+    static int32 OnClosing(__IntPtr w, __IntPtr data)
     {
     	ui.UiQuit();
     	return 1;
@@ -29,7 +29,7 @@ class Program
 
         // Create a new window
         var w = ui.UiNewWindow("Hello World!", 300, 30, 0);
-        ui.UiWindowOnClosing(w, scope => onClosing, null);
+        ui.UiWindowOnClosing(w, scope => OnClosing, null);
 
         var l = ui.UiNewLabel("Hello, World!");
         ui.UiWindowSetChild(w, Cast<UiControl...>(l));

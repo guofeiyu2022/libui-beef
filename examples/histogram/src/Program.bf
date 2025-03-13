@@ -20,7 +20,7 @@ class Program
     const double pointRadius = 5;
 
     // helper to quickly set a brush color
-    static void setSolidBrush(UiDrawBrush brush, uint32 color, double alpha)
+    static void SetSolidBrush(UiDrawBrush brush, uint32 color, double alpha)
     {
     	uint8 component;
 
@@ -40,7 +40,7 @@ class Program
     const uint32 colorBlack = 0x000000;
     const uint32 colorDodgerBlue = 0x1E90FF;
 
-    static void pointLocations(double width, double height, double[] xs, double[] ys)
+    static void PointLocations(double width, double height, double[] xs, double[] ys)
     {
     	double xincr, yincr;
     	int i, n;
@@ -58,14 +58,14 @@ class Program
     	}
     }
 
-    static UiDrawPath constructGraph(double width, double height, int extend)
+    static UiDrawPath ConstructGraph(double width, double height, int extend)
     {
     	UiDrawPath path;
         var xs = scope double[10];
         var ys = scope double[10];
     	int i;
 
-    	pointLocations(width, height, xs, ys);
+    	PointLocations(width, height, xs, ys);
 
     	path = ui.UiDrawNewPath((uint32)UiDrawFillMode.UiDrawFillModeWinding);
 
@@ -83,13 +83,13 @@ class Program
     	return path;
     }
 
-    static void graphSize(double clientWidth, double clientHeight, out double graphWidth, out double graphHeight)
+    static void GraphSize(double clientWidth, double clientHeight, out double graphWidth, out double graphHeight)
     {
     	graphWidth = clientWidth - xoffLeft - xoffRight;
     	graphHeight = clientHeight - yoffTop - yoffBottom;
     }
 
-    static void handlerDraw(__IntPtr p_a, __IntPtr p_area, __IntPtr p_p)
+    static void HandlerDraw(__IntPtr p_a, __IntPtr p_area, __IntPtr p_p)
     {
         var p = UiAreaDrawParams.FromInternalPtr(p_p);
 
@@ -101,7 +101,7 @@ class Program
     	double graphR = 0, graphG = 0, graphB = 0, graphA = 0;
 
     	// fill the area with white
-    	setSolidBrush(brush, colorWhite, 1.0);
+    	SetSolidBrush(brush, colorWhite, 1.0);
     	path = ui.UiDrawNewPath((uint32)UiDrawFillMode.UiDrawFillModeWinding);
     	ui.UiDrawPathAddRectangle(path, 0, 0, p.AreaWidth, p.AreaHeight);
     	ui.UiDrawPathEnd(path);
@@ -109,7 +109,7 @@ class Program
     	ui.UiDrawFreePath(path);
 
     	// figure out dimensions
-    	graphSize(p.AreaWidth, p.AreaHeight, out graphWidth, out graphHeight);
+    	GraphSize(p.AreaWidth, p.AreaHeight, out graphWidth, out graphHeight);
 
     	// clear sp to avoid passing garbage to uiDrawStroke()
     	// for example, we don't use dashing
@@ -122,7 +122,7 @@ class Program
     	sp.MiterLimit = 10.0; //(uint32)UiDrawDefaultMiterLimit;
 
     	// draw the axes
-    	setSolidBrush(brush, colorBlack, 1.0);
+    	SetSolidBrush(brush, colorBlack, 1.0);
     	path = ui.UiDrawNewPath((uint32)UiDrawFillMode.UiDrawFillModeWinding);
     	ui.UiDrawPathNewFigure(path,
     		xoffLeft, yoffTop);
@@ -148,13 +148,13 @@ class Program
     	// we set brush->A below to different values for the fill and stroke
 
     	// now create the fill for the graph below the graph line
-    	path = constructGraph(graphWidth, graphHeight, 1);
+    	path = ConstructGraph(graphWidth, graphHeight, 1);
     	brush.A = graphA / 2;
     	ui.UiDrawFill(p.Context, path, brush);
     	ui.UiDrawFreePath(path);
 
     	// now draw the histogram line
-    	path = constructGraph(graphWidth, graphHeight, 0);
+    	path = ConstructGraph(graphWidth, graphHeight, 0);
     	brush.A = graphA;
     	ui.UiDrawStroke(p.Context, path, brush, sp);
     	ui.UiDrawFreePath(path);
@@ -164,7 +164,7 @@ class Program
             var xs = scope double[10];
     		var ys = scope double[10];
 
-    		pointLocations(graphWidth, graphHeight, xs, ys);
+    		PointLocations(graphWidth, graphHeight, xs, ys);
     		path = ui.UiDrawNewPath((uint32)UiDrawFillMode.UiDrawFillModeWinding);
     		ui.UiDrawPathNewFigureWithArc(path,
     			xs[currentPoint], ys[currentPoint],
@@ -178,7 +178,7 @@ class Program
     	}
     }
 
-    static bool inPoint(double x, double y, double xtest, double ytest)
+    static bool InPoint(double x, double y, double xtest, double ytest)
     {
     	// TODO switch to using a matrix
         var x, y;
@@ -190,7 +190,7 @@ class Program
     		(y <= ytest + pointRadius);
     }
 
-    static void handlerMouseEvent(__IntPtr p_a, __IntPtr p_area, __IntPtr p_e)
+    static void HandlerMouseEvent(__IntPtr p_a, __IntPtr p_area, __IntPtr p_e)
     {
         var e = UiAreaMouseEvent.FromInternalPtr(p_e);
     	double graphWidth, graphHeight;
@@ -198,11 +198,11 @@ class Program
         var ys = scope double[10];
     	int i;
 
-    	graphSize(e.AreaWidth, e.AreaHeight, out graphWidth, out graphHeight);
-    	pointLocations(graphWidth, graphHeight, xs, ys);
+    	GraphSize(e.AreaWidth, e.AreaHeight, out graphWidth, out graphHeight);
+    	PointLocations(graphWidth, graphHeight, xs, ys);
 
     	for (i = 0; i < 10; i++)
-    		if (inPoint(e.X, e.Y, xs[i], ys[i]))
+    		if (InPoint(e.X, e.Y, xs[i], ys[i]))
     			break;
     	if (i == 10)		// not in a point
     		i = -1;
@@ -212,40 +212,40 @@ class Program
     	ui.UiAreaQueueRedrawAll(histogram);
     }
 
-    static void handlerMouseCrossed(__IntPtr ah, __IntPtr a, int32 left)
+    static void HandlerMouseCrossed(__IntPtr ah, __IntPtr a, int32 left)
     {
     	// do nothing
     }
 
-    static void handlerDragBroken(__IntPtr ah, __IntPtr a)
+    static void HandlerDragBroken(__IntPtr ah, __IntPtr a)
     {
     	// do nothing
     }
 
-    static int32 handlerKeyEvent(__IntPtr ah, __IntPtr a, __IntPtr e)
+    static int32 HandlerKeyEvent(__IntPtr ah, __IntPtr a, __IntPtr e)
     {
     	// reject all keys
     	return 0;
     }
 
-    static void onDatapointChanged(__IntPtr s, __IntPtr data)
+    static void OnDatapointChanged(__IntPtr s, __IntPtr data)
     {
     	ui.UiAreaQueueRedrawAll(histogram);
     }
 
-    static void onColorChanged(__IntPtr b, __IntPtr data)
+    static void OnColorChanged(__IntPtr b, __IntPtr data)
     {
     	ui.UiAreaQueueRedrawAll(histogram);
     }
 
-    static int32 onClosing(__IntPtr w, __IntPtr data)
+    static int32 OnClosing(__IntPtr w, __IntPtr data)
     {
     	ui.UiControlDestroy(Cast<UiControl...>(mainwin));
     	ui.UiQuit();
     	return 0;
     }
 
-    static int32 shouldQuit(__IntPtr data)
+    static int32 ShouldQuit(__IntPtr data)
     {
     	ui.UiControlDestroy(Cast<UiControl...>(mainwin));
     	return 1;
@@ -259,11 +259,11 @@ class Program
         UiDrawBrush brush = scope UiDrawBrush();
 
         handler = scope UiAreaHandler();
-        handler.Draw = scope => handlerDraw;
-        handler.MouseEvent = scope => handlerMouseEvent;
-        handler.MouseCrossed = scope => handlerMouseCrossed;
-        handler.DragBroken = scope => handlerDragBroken;
-        handler.KeyEvent = scope => handlerKeyEvent;
+        handler.Draw = scope => HandlerDraw;
+        handler.MouseEvent = scope => HandlerMouseEvent;
+        handler.MouseCrossed = scope => HandlerMouseCrossed;
+        handler.DragBroken = scope => HandlerDragBroken;
+        handler.KeyEvent = scope => HandlerKeyEvent;
 
         var err = ui.UiInit(o);
         if (err != null) {
@@ -272,11 +272,11 @@ class Program
         	return 1;
         }
 
-        ui.UiOnShouldQuit(scope => shouldQuit, null);
+        ui.UiOnShouldQuit(scope => ShouldQuit, null);
 
         mainwin = ui.UiNewWindow("libui Histogram Example", 640, 480, 1);
         ui.UiWindowSetMargined(mainwin, 1);
-        ui.UiWindowOnClosing(mainwin, scope => onClosing, null);
+        ui.UiWindowOnClosing(mainwin, scope => OnClosing, null);
 
         hbox = ui.UiNewHorizontalBox();
         ui.UiBoxSetPadded(hbox, 1);
@@ -290,19 +290,19 @@ class Program
         for (i = 0; i < 10; i++) {
         	datapoints[i] = ui.UiNewSpinbox(0, 100);
         	ui.UiSpinboxSetValue(datapoints[i], scope Random().NextI32() % 101);
-        	ui.UiSpinboxOnChanged(datapoints[i], scope => onDatapointChanged, null);
+        	ui.UiSpinboxOnChanged(datapoints[i], scope => OnDatapointChanged, null);
         	ui.UiBoxAppend(vbox, Cast<UiControl...>(datapoints[i]), 0);
         }
 
         colorButton = ui.UiNewColorButton();
         // TODO inline these
-        setSolidBrush(brush, colorDodgerBlue, 1.0);
+        SetSolidBrush(brush, colorDodgerBlue, 1.0);
         ui.UiColorButtonSetColor(colorButton,
         	brush.R,
         	brush.G,
         	brush.B,
         	brush.A);
-        ui.UiColorButtonOnChanged(colorButton, scope => onColorChanged, null);
+        ui.UiColorButtonOnChanged(colorButton, scope => OnColorChanged, null);
         ui.UiBoxAppend(vbox, Cast<UiControl...>(colorButton), 0);
 
         histogram = ui.UiNewArea(handler);

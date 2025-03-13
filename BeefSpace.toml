@@ -1,5 +1,5 @@
 FileVersion = 1
-Projects = {libui-beef = {Path = "."}, controlgallery = {Path = "examples/controlgallery"}, hello-world = {Path = "examples/hello-world"}, histogram = {Path = "examples/histogram"}}
+Projects = {libui-beef = {Path = "."}, controlgallery = {Path = "examples/controlgallery"}, hello-world = {Path = "examples/hello-world"}, histogram = {Path = "examples/histogram"}, drawtext = {Path = "examples/drawtext"}}
 
 [Workspace]
 StartupProject = "hello-world"

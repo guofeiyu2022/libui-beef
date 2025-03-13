@@ -241,7 +241,7 @@ namespace libui
     }
 
     /// <summary>Base class for GUI controls providing common methods.</summary>
-    public delegate uint32 UiOpenTypeFeaturesForEachFunc(__IntPtr otf, int8 a, int8 b, int8 c, int8 d, uint32 value, __IntPtr data);
+    public delegate uint32 UiOpenTypeFeaturesForEachFunc(__IntPtr otf, char8 a, char8 b, char8 c, char8 d, uint32 value, __IntPtr data);
 
     public delegate uint32 UiAttributedStringForEachAttributeFunc(__IntPtr s, __IntPtr a, uint64 start, uint64 end, __IntPtr data);
 
@@ -275,15 +275,15 @@ namespace libui
 
         private static mixin DeleteNativeToManagedMap(var container)
         {
-        	if (container != null)
-        	{
-        		for (var value in container)
-        		{
+            if (container != null)
+            {
+                for (var value in container)
+                {
                     if (value.value != null)
-        			    delete value.value;
-        		}
-        		delete container;
-        	}
+                        delete value.value;
+                }
+                delete container;
+            }
         }
 
         internal static void __RecordNativeToManagedMapping(__IntPtr native, libui.UiInitOptions managed)
@@ -405,15 +405,15 @@ namespace libui
 
         private static mixin DeleteNativeToManagedMap(var container)
         {
-        	if (container != null)
-        	{
-        		for (var value in container)
-        		{
+            if (container != null)
+            {
+                for (var value in container)
+                {
                     if (value.value != null)
-        			    delete value.value;
-        		}
-        		delete container;
-        	}
+                        delete value.value;
+                }
+                delete container;
+            }
         }
 
         internal static void __RecordNativeToManagedMapping(__IntPtr native, libui.UiWindow managed)
@@ -494,15 +494,15 @@ namespace libui
 
         private static mixin DeleteNativeToManagedMap(var container)
         {
-        	if (container != null)
-        	{
-        		for (var value in container)
-        		{
+            if (container != null)
+            {
+                for (var value in container)
+                {
                     if (value.value != null)
-        			    delete value.value;
-        		}
-        		delete container;
-        	}
+                        delete value.value;
+                }
+                delete container;
+            }
         }
 
         internal static void __RecordNativeToManagedMapping(__IntPtr native, libui.UiButton managed)
@@ -583,15 +583,15 @@ namespace libui
 
         private static mixin DeleteNativeToManagedMap(var container)
         {
-        	if (container != null)
-        	{
-        		for (var value in container)
-        		{
+            if (container != null)
+            {
+                for (var value in container)
+                {
                     if (value.value != null)
-        			    delete value.value;
-        		}
-        		delete container;
-        	}
+                        delete value.value;
+                }
+                delete container;
+            }
         }
 
         internal static void __RecordNativeToManagedMapping(__IntPtr native, libui.UiBox managed)
@@ -672,15 +672,15 @@ namespace libui
 
         private static mixin DeleteNativeToManagedMap(var container)
         {
-        	if (container != null)
-        	{
-        		for (var value in container)
-        		{
+            if (container != null)
+            {
+                for (var value in container)
+                {
                     if (value.value != null)
-        			    delete value.value;
-        		}
-        		delete container;
-        	}
+                        delete value.value;
+                }
+                delete container;
+            }
         }
 
         internal static void __RecordNativeToManagedMapping(__IntPtr native, libui.UiCheckbox managed)
@@ -761,15 +761,15 @@ namespace libui
 
         private static mixin DeleteNativeToManagedMap(var container)
         {
-        	if (container != null)
-        	{
-        		for (var value in container)
-        		{
+            if (container != null)
+            {
+                for (var value in container)
+                {
                     if (value.value != null)
-        			    delete value.value;
-        		}
-        		delete container;
-        	}
+                        delete value.value;
+                }
+                delete container;
+            }
         }
 
         internal static void __RecordNativeToManagedMapping(__IntPtr native, libui.UiEntry managed)
@@ -850,15 +850,15 @@ namespace libui
 
         private static mixin DeleteNativeToManagedMap(var container)
         {
-        	if (container != null)
-        	{
-        		for (var value in container)
-        		{
+            if (container != null)
+            {
+                for (var value in container)
+                {
                     if (value.value != null)
-        			    delete value.value;
-        		}
-        		delete container;
-        	}
+                        delete value.value;
+                }
+                delete container;
+            }
         }
 
         internal static void __RecordNativeToManagedMapping(__IntPtr native, libui.UiLabel managed)
@@ -939,15 +939,15 @@ namespace libui
 
         private static mixin DeleteNativeToManagedMap(var container)
         {
-        	if (container != null)
-        	{
-        		for (var value in container)
-        		{
+            if (container != null)
+            {
+                for (var value in container)
+                {
                     if (value.value != null)
-        			    delete value.value;
-        		}
-        		delete container;
-        	}
+                        delete value.value;
+                }
+                delete container;
+            }
         }
 
         internal static void __RecordNativeToManagedMapping(__IntPtr native, libui.UiTab managed)
@@ -1028,15 +1028,15 @@ namespace libui
 
         private static mixin DeleteNativeToManagedMap(var container)
         {
-        	if (container != null)
-        	{
-        		for (var value in container)
-        		{
+            if (container != null)
+            {
+                for (var value in container)
+                {
                     if (value.value != null)
-        			    delete value.value;
-        		}
-        		delete container;
-        	}
+                        delete value.value;
+                }
+                delete container;
+            }
         }
 
         internal static void __RecordNativeToManagedMapping(__IntPtr native, libui.UiGroup managed)
@@ -1117,15 +1117,15 @@ namespace libui
 
         private static mixin DeleteNativeToManagedMap(var container)
         {
-        	if (container != null)
-        	{
-        		for (var value in container)
-        		{
+            if (container != null)
+            {
+                for (var value in container)
+                {
                     if (value.value != null)
-        			    delete value.value;
-        		}
-        		delete container;
-        	}
+                        delete value.value;
+                }
+                delete container;
+            }
         }
 
         internal static void __RecordNativeToManagedMapping(__IntPtr native, libui.UiSpinbox managed)
@@ -1206,15 +1206,15 @@ namespace libui
 
         private static mixin DeleteNativeToManagedMap(var container)
         {
-        	if (container != null)
-        	{
-        		for (var value in container)
-        		{
+            if (container != null)
+            {
+                for (var value in container)
+                {
                     if (value.value != null)
-        			    delete value.value;
-        		}
-        		delete container;
-        	}
+                        delete value.value;
+                }
+                delete container;
+            }
         }
 
         internal static void __RecordNativeToManagedMapping(__IntPtr native, libui.UiSlider managed)
@@ -1295,15 +1295,15 @@ namespace libui
 
         private static mixin DeleteNativeToManagedMap(var container)
         {
-        	if (container != null)
-        	{
-        		for (var value in container)
-        		{
+            if (container != null)
+            {
+                for (var value in container)
+                {
                     if (value.value != null)
-        			    delete value.value;
-        		}
-        		delete container;
-        	}
+                        delete value.value;
+                }
+                delete container;
+            }
         }
 
         internal static void __RecordNativeToManagedMapping(__IntPtr native, libui.UiProgressBar managed)
@@ -1384,15 +1384,15 @@ namespace libui
 
         private static mixin DeleteNativeToManagedMap(var container)
         {
-        	if (container != null)
-        	{
-        		for (var value in container)
-        		{
+            if (container != null)
+            {
+                for (var value in container)
+                {
                     if (value.value != null)
-        			    delete value.value;
-        		}
-        		delete container;
-        	}
+                        delete value.value;
+                }
+                delete container;
+            }
         }
 
         internal static void __RecordNativeToManagedMapping(__IntPtr native, libui.UiSeparator managed)
@@ -1473,15 +1473,15 @@ namespace libui
 
         private static mixin DeleteNativeToManagedMap(var container)
         {
-        	if (container != null)
-        	{
-        		for (var value in container)
-        		{
+            if (container != null)
+            {
+                for (var value in container)
+                {
                     if (value.value != null)
-        			    delete value.value;
-        		}
-        		delete container;
-        	}
+                        delete value.value;
+                }
+                delete container;
+            }
         }
 
         internal static void __RecordNativeToManagedMapping(__IntPtr native, libui.UiCombobox managed)
@@ -1562,15 +1562,15 @@ namespace libui
 
         private static mixin DeleteNativeToManagedMap(var container)
         {
-        	if (container != null)
-        	{
-        		for (var value in container)
-        		{
+            if (container != null)
+            {
+                for (var value in container)
+                {
                     if (value.value != null)
-        			    delete value.value;
-        		}
-        		delete container;
-        	}
+                        delete value.value;
+                }
+                delete container;
+            }
         }
 
         internal static void __RecordNativeToManagedMapping(__IntPtr native, libui.UiEditableCombobox managed)
@@ -1651,15 +1651,15 @@ namespace libui
 
         private static mixin DeleteNativeToManagedMap(var container)
         {
-        	if (container != null)
-        	{
-        		for (var value in container)
-        		{
+            if (container != null)
+            {
+                for (var value in container)
+                {
                     if (value.value != null)
-        			    delete value.value;
-        		}
-        		delete container;
-        	}
+                        delete value.value;
+                }
+                delete container;
+            }
         }
 
         internal static void __RecordNativeToManagedMapping(__IntPtr native, libui.UiRadioButtons managed)
@@ -1740,15 +1740,15 @@ namespace libui
 
         private static mixin DeleteNativeToManagedMap(var container)
         {
-        	if (container != null)
-        	{
-        		for (var value in container)
-        		{
+            if (container != null)
+            {
+                for (var value in container)
+                {
                     if (value.value != null)
-        			    delete value.value;
-        		}
-        		delete container;
-        	}
+                        delete value.value;
+                }
+                delete container;
+            }
         }
 
         internal static void __RecordNativeToManagedMapping(__IntPtr native, libui.Tm managed)
@@ -1829,15 +1829,15 @@ namespace libui
 
         private static mixin DeleteNativeToManagedMap(var container)
         {
-        	if (container != null)
-        	{
-        		for (var value in container)
-        		{
+            if (container != null)
+            {
+                for (var value in container)
+                {
                     if (value.value != null)
-        			    delete value.value;
-        		}
-        		delete container;
-        	}
+                        delete value.value;
+                }
+                delete container;
+            }
         }
 
         internal static void __RecordNativeToManagedMapping(__IntPtr native, libui.UiDateTimePicker managed)
@@ -1918,15 +1918,15 @@ namespace libui
 
         private static mixin DeleteNativeToManagedMap(var container)
         {
-        	if (container != null)
-        	{
-        		for (var value in container)
-        		{
+            if (container != null)
+            {
+                for (var value in container)
+                {
                     if (value.value != null)
-        			    delete value.value;
-        		}
-        		delete container;
-        	}
+                        delete value.value;
+                }
+                delete container;
+            }
         }
 
         internal static void __RecordNativeToManagedMapping(__IntPtr native, libui.UiMultilineEntry managed)
@@ -2007,15 +2007,15 @@ namespace libui
 
         private static mixin DeleteNativeToManagedMap(var container)
         {
-        	if (container != null)
-        	{
-        		for (var value in container)
-        		{
+            if (container != null)
+            {
+                for (var value in container)
+                {
                     if (value.value != null)
-        			    delete value.value;
-        		}
-        		delete container;
-        	}
+                        delete value.value;
+                }
+                delete container;
+            }
         }
 
         internal static void __RecordNativeToManagedMapping(__IntPtr native, libui.UiMenuItem managed)
@@ -2096,15 +2096,15 @@ namespace libui
 
         private static mixin DeleteNativeToManagedMap(var container)
         {
-        	if (container != null)
-        	{
-        		for (var value in container)
-        		{
+            if (container != null)
+            {
+                for (var value in container)
+                {
                     if (value.value != null)
-        			    delete value.value;
-        		}
-        		delete container;
-        	}
+                        delete value.value;
+                }
+                delete container;
+            }
         }
 
         internal static void __RecordNativeToManagedMapping(__IntPtr native, libui.UiMenu managed)
@@ -2185,15 +2185,15 @@ namespace libui
 
         private static mixin DeleteNativeToManagedMap(var container)
         {
-        	if (container != null)
-        	{
-        		for (var value in container)
-        		{
+            if (container != null)
+            {
+                for (var value in container)
+                {
                     if (value.value != null)
-        			    delete value.value;
-        		}
-        		delete container;
-        	}
+                        delete value.value;
+                }
+                delete container;
+            }
         }
 
         internal static void __RecordNativeToManagedMapping(__IntPtr native, libui.UiArea managed)
@@ -2274,15 +2274,15 @@ namespace libui
 
         private static mixin DeleteNativeToManagedMap(var container)
         {
-        	if (container != null)
-        	{
-        		for (var value in container)
-        		{
+            if (container != null)
+            {
+                for (var value in container)
+                {
                     if (value.value != null)
-        			    delete value.value;
-        		}
-        		delete container;
-        	}
+                        delete value.value;
+                }
+                delete container;
+            }
         }
 
         internal static void __RecordNativeToManagedMapping(__IntPtr native, libui.UiDrawContext managed)
@@ -2363,15 +2363,15 @@ namespace libui
 
         private static mixin DeleteNativeToManagedMap(var container)
         {
-        	if (container != null)
-        	{
-        		for (var value in container)
-        		{
+            if (container != null)
+            {
+                for (var value in container)
+                {
                     if (value.value != null)
-        			    delete value.value;
-        		}
-        		delete container;
-        	}
+                        delete value.value;
+                }
+                delete container;
+            }
         }
 
         internal static void __RecordNativeToManagedMapping(__IntPtr native, libui.UiDrawPath managed)
@@ -2452,15 +2452,15 @@ namespace libui
 
         private static mixin DeleteNativeToManagedMap(var container)
         {
-        	if (container != null)
-        	{
-        		for (var value in container)
-        		{
+            if (container != null)
+            {
+                for (var value in container)
+                {
                     if (value.value != null)
-        			    delete value.value;
-        		}
-        		delete container;
-        	}
+                        delete value.value;
+                }
+                delete container;
+            }
         }
 
         internal static void __RecordNativeToManagedMapping(__IntPtr native, libui.UiAttribute managed)
@@ -2541,15 +2541,15 @@ namespace libui
 
         private static mixin DeleteNativeToManagedMap(var container)
         {
-        	if (container != null)
-        	{
-        		for (var value in container)
-        		{
+            if (container != null)
+            {
+                for (var value in container)
+                {
                     if (value.value != null)
-        			    delete value.value;
-        		}
-        		delete container;
-        	}
+                        delete value.value;
+                }
+                delete container;
+            }
         }
 
         internal static void __RecordNativeToManagedMapping(__IntPtr native, libui.UiOpenTypeFeatures managed)
@@ -2630,15 +2630,15 @@ namespace libui
 
         private static mixin DeleteNativeToManagedMap(var container)
         {
-        	if (container != null)
-        	{
-        		for (var value in container)
-        		{
+            if (container != null)
+            {
+                for (var value in container)
+                {
                     if (value.value != null)
-        			    delete value.value;
-        		}
-        		delete container;
-        	}
+                        delete value.value;
+                }
+                delete container;
+            }
         }
 
         internal static void __RecordNativeToManagedMapping(__IntPtr native, libui.UiAttributedString managed)
@@ -2719,15 +2719,15 @@ namespace libui
 
         private static mixin DeleteNativeToManagedMap(var container)
         {
-        	if (container != null)
-        	{
-        		for (var value in container)
-        		{
+            if (container != null)
+            {
+                for (var value in container)
+                {
                     if (value.value != null)
-        			    delete value.value;
-        		}
-        		delete container;
-        	}
+                        delete value.value;
+                }
+                delete container;
+            }
         }
 
         internal static void __RecordNativeToManagedMapping(__IntPtr native, libui.UiDrawTextLayout managed)
@@ -2808,15 +2808,15 @@ namespace libui
 
         private static mixin DeleteNativeToManagedMap(var container)
         {
-        	if (container != null)
-        	{
-        		for (var value in container)
-        		{
+            if (container != null)
+            {
+                for (var value in container)
+                {
                     if (value.value != null)
-        			    delete value.value;
-        		}
-        		delete container;
-        	}
+                        delete value.value;
+                }
+                delete container;
+            }
         }
 
         internal static void __RecordNativeToManagedMapping(__IntPtr native, libui.UiFontButton managed)
@@ -2897,15 +2897,15 @@ namespace libui
 
         private static mixin DeleteNativeToManagedMap(var container)
         {
-        	if (container != null)
-        	{
-        		for (var value in container)
-        		{
+            if (container != null)
+            {
+                for (var value in container)
+                {
                     if (value.value != null)
-        			    delete value.value;
-        		}
-        		delete container;
-        	}
+                        delete value.value;
+                }
+                delete container;
+            }
         }
 
         internal static void __RecordNativeToManagedMapping(__IntPtr native, libui.UiColorButton managed)
@@ -2986,15 +2986,15 @@ namespace libui
 
         private static mixin DeleteNativeToManagedMap(var container)
         {
-        	if (container != null)
-        	{
-        		for (var value in container)
-        		{
+            if (container != null)
+            {
+                for (var value in container)
+                {
                     if (value.value != null)
-        			    delete value.value;
-        		}
-        		delete container;
-        	}
+                        delete value.value;
+                }
+                delete container;
+            }
         }
 
         internal static void __RecordNativeToManagedMapping(__IntPtr native, libui.UiForm managed)
@@ -3075,15 +3075,15 @@ namespace libui
 
         private static mixin DeleteNativeToManagedMap(var container)
         {
-        	if (container != null)
-        	{
-        		for (var value in container)
-        		{
+            if (container != null)
+            {
+                for (var value in container)
+                {
                     if (value.value != null)
-        			    delete value.value;
-        		}
-        		delete container;
-        	}
+                        delete value.value;
+                }
+                delete container;
+            }
         }
 
         internal static void __RecordNativeToManagedMapping(__IntPtr native, libui.UiGrid managed)
@@ -3164,15 +3164,15 @@ namespace libui
 
         private static mixin DeleteNativeToManagedMap(var container)
         {
-        	if (container != null)
-        	{
-        		for (var value in container)
-        		{
+            if (container != null)
+            {
+                for (var value in container)
+                {
                     if (value.value != null)
-        			    delete value.value;
-        		}
-        		delete container;
-        	}
+                        delete value.value;
+                }
+                delete container;
+            }
         }
 
         internal static void __RecordNativeToManagedMapping(__IntPtr native, libui.UiImage managed)
@@ -3253,15 +3253,15 @@ namespace libui
 
         private static mixin DeleteNativeToManagedMap(var container)
         {
-        	if (container != null)
-        	{
-        		for (var value in container)
-        		{
+            if (container != null)
+            {
+                for (var value in container)
+                {
                     if (value.value != null)
-        			    delete value.value;
-        		}
-        		delete container;
-        	}
+                        delete value.value;
+                }
+                delete container;
+            }
         }
 
         internal static void __RecordNativeToManagedMapping(__IntPtr native, libui.UiTableValue managed)
@@ -3342,15 +3342,15 @@ namespace libui
 
         private static mixin DeleteNativeToManagedMap(var container)
         {
-        	if (container != null)
-        	{
-        		for (var value in container)
-        		{
+            if (container != null)
+            {
+                for (var value in container)
+                {
                     if (value.value != null)
-        			    delete value.value;
-        		}
-        		delete container;
-        	}
+                        delete value.value;
+                }
+                delete container;
+            }
         }
 
         internal static void __RecordNativeToManagedMapping(__IntPtr native, libui.UiTableModel managed)
@@ -3431,15 +3431,15 @@ namespace libui
 
         private static mixin DeleteNativeToManagedMap(var container)
         {
-        	if (container != null)
-        	{
-        		for (var value in container)
-        		{
+            if (container != null)
+            {
+                for (var value in container)
+                {
                     if (value.value != null)
-        			    delete value.value;
-        		}
-        		delete container;
-        	}
+                        delete value.value;
+                }
+                delete container;
+            }
         }
 
         internal static void __RecordNativeToManagedMapping(__IntPtr native, libui.UiTable managed)
@@ -3538,15 +3538,15 @@ namespace libui
 
         private static mixin DeleteNativeToManagedMap(var container)
         {
-        	if (container != null)
-        	{
-        		for (var value in container)
-        		{
+            if (container != null)
+            {
+                for (var value in container)
+                {
                     if (value.value != null)
-        			    delete value.value;
-        		}
-        		delete container;
-        	}
+                        delete value.value;
+                }
+                delete container;
+            }
         }
 
         internal static void __RecordNativeToManagedMapping(__IntPtr native, libui.UiControl managed)
@@ -3857,15 +3857,15 @@ namespace libui
 
         private static mixin DeleteNativeToManagedMap(var container)
         {
-        	if (container != null)
-        	{
-        		for (var value in container)
-        		{
+            if (container != null)
+            {
+                for (var value in container)
+                {
                     if (value.value != null)
-        			    delete value.value;
-        		}
-        		delete container;
-        	}
+                        delete value.value;
+                }
+                delete container;
+            }
         }
 
         internal static void __RecordNativeToManagedMapping(__IntPtr native, libui.UiAreaHandler managed)
@@ -4055,15 +4055,15 @@ namespace libui
 
         private static mixin DeleteNativeToManagedMap(var container)
         {
-        	if (container != null)
-        	{
-        		for (var value in container)
-        		{
+            if (container != null)
+            {
+                for (var value in container)
+                {
                     if (value.value != null)
-        			    delete value.value;
-        		}
-        		delete container;
-        	}
+                        delete value.value;
+                }
+                delete container;
+            }
         }
 
         internal static void __RecordNativeToManagedMapping(__IntPtr native, libui.UiAreaDrawParams managed)
@@ -4274,15 +4274,15 @@ namespace libui
 
         private static mixin DeleteNativeToManagedMap(var container)
         {
-        	if (container != null)
-        	{
-        		for (var value in container)
-        		{
+            if (container != null)
+            {
+                for (var value in container)
+                {
                     if (value.value != null)
-        			    delete value.value;
-        		}
-        		delete container;
-        	}
+                        delete value.value;
+                }
+                delete container;
+            }
         }
 
         internal static void __RecordNativeToManagedMapping(__IntPtr native, libui.UiDrawMatrix managed)
@@ -4485,15 +4485,15 @@ namespace libui
 
         private static mixin DeleteNativeToManagedMap(var container)
         {
-        	if (container != null)
-        	{
-        		for (var value in container)
-        		{
+            if (container != null)
+            {
+                for (var value in container)
+                {
                     if (value.value != null)
-        			    delete value.value;
-        		}
-        		delete container;
-        	}
+                        delete value.value;
+                }
+                delete container;
+            }
         }
 
         internal static void __RecordNativeToManagedMapping(__IntPtr native, libui.UiDrawBrush managed)
@@ -4768,15 +4768,15 @@ namespace libui
 
         private static mixin DeleteNativeToManagedMap(var container)
         {
-        	if (container != null)
-        	{
-        		for (var value in container)
-        		{
+            if (container != null)
+            {
+                for (var value in container)
+                {
                     if (value.value != null)
-        			    delete value.value;
-        		}
-        		delete container;
-        	}
+                        delete value.value;
+                }
+                delete container;
+            }
         }
 
         internal static void __RecordNativeToManagedMapping(__IntPtr native, libui.UiDrawBrushGradientStop managed)
@@ -4961,15 +4961,15 @@ namespace libui
 
         private static mixin DeleteNativeToManagedMap(var container)
         {
-        	if (container != null)
-        	{
-        		for (var value in container)
-        		{
+            if (container != null)
+            {
+                for (var value in container)
+                {
                     if (value.value != null)
-        			    delete value.value;
-        		}
-        		delete container;
-        	}
+                        delete value.value;
+                }
+                delete container;
+            }
         }
 
         internal static void __RecordNativeToManagedMapping(__IntPtr native, libui.UiDrawStrokeParams managed)
@@ -5178,15 +5178,15 @@ namespace libui
 
         private static mixin DeleteNativeToManagedMap(var container)
         {
-        	if (container != null)
-        	{
-        		for (var value in container)
-        		{
+            if (container != null)
+            {
+                for (var value in container)
+                {
                     if (value.value != null)
-        			    delete value.value;
-        		}
-        		delete container;
-        	}
+                        delete value.value;
+                }
+                delete container;
+            }
         }
 
         internal static void __RecordNativeToManagedMapping(__IntPtr native, libui.UiFontDescriptor managed)
@@ -5368,15 +5368,15 @@ namespace libui
 
         private static mixin DeleteNativeToManagedMap(var container)
         {
-        	if (container != null)
-        	{
-        		for (var value in container)
-        		{
+            if (container != null)
+            {
+                for (var value in container)
+                {
                     if (value.value != null)
-        			    delete value.value;
-        		}
-        		delete container;
-        	}
+                        delete value.value;
+                }
+                delete container;
+            }
         }
 
         internal static void __RecordNativeToManagedMapping(__IntPtr native, libui.UiDrawTextLayoutParams managed)
@@ -5552,15 +5552,15 @@ namespace libui
 
         private static mixin DeleteNativeToManagedMap(var container)
         {
-        	if (container != null)
-        	{
-        		for (var value in container)
-        		{
+            if (container != null)
+            {
+                for (var value in container)
+                {
                     if (value.value != null)
-        			    delete value.value;
-        		}
-        		delete container;
-        	}
+                        delete value.value;
+                }
+                delete container;
+            }
         }
 
         internal static void __RecordNativeToManagedMapping(__IntPtr native, libui.UiAreaMouseEvent managed)
@@ -5778,7 +5778,7 @@ namespace libui
         [CRepr]
         public struct __Internal
         {
-            internal int8 Key;
+            internal char8 Key;
             internal uint32 ExtKey;
             internal uint32 Modifier;
             internal uint32 Modifiers;
@@ -5795,15 +5795,15 @@ namespace libui
 
         private static mixin DeleteNativeToManagedMap(var container)
         {
-        	if (container != null)
-        	{
-        		for (var value in container)
-        		{
+            if (container != null)
+            {
+                for (var value in container)
+                {
                     if (value.value != null)
-        			    delete value.value;
-        		}
-        		delete container;
-        	}
+                        delete value.value;
+                }
+                delete container;
+            }
         }
 
         internal static void __RecordNativeToManagedMapping(__IntPtr native, libui.UiAreaKeyEvent managed)
@@ -5898,7 +5898,7 @@ namespace libui
             __Instance = null;
         }
 
-        public int8 Key
+        public char8 Key
         {
             get
             {
@@ -5986,15 +5986,15 @@ namespace libui
 
         private static mixin DeleteNativeToManagedMap(var container)
         {
-        	if (container != null)
-        	{
-        		for (var value in container)
-        		{
+            if (container != null)
+            {
+                for (var value in container)
+                {
                     if (value.value != null)
-        			    delete value.value;
-        		}
-        		delete container;
-        	}
+                        delete value.value;
+                }
+                delete container;
+            }
         }
 
         internal static void __RecordNativeToManagedMapping(__IntPtr native, libui.UiTableModelHandler managed)
@@ -6209,15 +6209,15 @@ namespace libui
 
         private static mixin DeleteNativeToManagedMap(var container)
         {
-        	if (container != null)
-        	{
-        		for (var value in container)
-        		{
+            if (container != null)
+            {
+                for (var value in container)
+                {
                     if (value.value != null)
-        			    delete value.value;
-        		}
-        		delete container;
-        	}
+                        delete value.value;
+                }
+                delete container;
+            }
         }
 
         internal static void __RecordNativeToManagedMapping(__IntPtr native, libui.UiTableTextColumnOptionalParams managed)
@@ -6351,15 +6351,15 @@ namespace libui
 
         private static mixin DeleteNativeToManagedMap(var container)
         {
-        	if (container != null)
-        	{
-        		for (var value in container)
-        		{
+            if (container != null)
+            {
+                for (var value in container)
+                {
                     if (value.value != null)
-        			    delete value.value;
-        		}
-        		delete container;
-        	}
+                        delete value.value;
+                }
+                delete container;
+            }
         }
 
         internal static void __RecordNativeToManagedMapping(__IntPtr native, libui.UiTableParams managed)
@@ -6508,15 +6508,15 @@ namespace libui
 
         private static mixin DeleteNativeToManagedMap(var container)
         {
-        	if (container != null)
-        	{
-        		for (var value in container)
-        		{
+            if (container != null)
+            {
+                for (var value in container)
+                {
                     if (value.value != null)
-        			    delete value.value;
-        		}
-        		delete container;
-        	}
+                        delete value.value;
+                }
+                delete container;
+            }
         }
 
         internal static void __RecordNativeToManagedMapping(__IntPtr native, libui.UiTableSelection managed)
@@ -7290,13 +7290,13 @@ namespace libui
             internal static extern __IntPtr UiOpenTypeFeaturesClone(__IntPtr otf);
 
             [LinkName("uiOpenTypeFeaturesAdd"), CallingConvention(.Cdecl)]
-            internal static extern void UiOpenTypeFeaturesAdd(__IntPtr otf, int8 a, int8 b, int8 c, int8 d, uint32 value);
+            internal static extern void UiOpenTypeFeaturesAdd(__IntPtr otf, char8 a, char8 b, char8 c, char8 d, uint32 value);
 
             [LinkName("uiOpenTypeFeaturesRemove"), CallingConvention(.Cdecl)]
-            internal static extern void UiOpenTypeFeaturesRemove(__IntPtr otf, int8 a, int8 b, int8 c, int8 d);
+            internal static extern void UiOpenTypeFeaturesRemove(__IntPtr otf, char8 a, char8 b, char8 c, char8 d);
 
             [LinkName("uiOpenTypeFeaturesGet"), CallingConvention(.Cdecl)]
-            internal static extern int32 UiOpenTypeFeaturesGet(__IntPtr otf, int8 a, int8 b, int8 c, int8 d, uint32* value);
+            internal static extern int32 UiOpenTypeFeaturesGet(__IntPtr otf, char8 a, char8 b, char8 c, char8 d, uint32* value);
 
             [LinkName("uiOpenTypeFeaturesForEach"), CallingConvention(.Cdecl)]
             internal static extern void UiOpenTypeFeaturesForEach(__IntPtr otf, __IntPtr f, __IntPtr data);
@@ -9691,19 +9691,19 @@ namespace libui
             return __result0;
         }
 
-        public static void UiOpenTypeFeaturesAdd(libui.UiOpenTypeFeatures otf, int8 a, int8 b, int8 c, int8 d, uint32 value)
+        public static void UiOpenTypeFeaturesAdd(libui.UiOpenTypeFeatures otf, char8 a, char8 b, char8 c, char8 d, uint32 value)
         {
             var __arg0 = otf == null ? null : otf.__Instance;
             __Internal.UiOpenTypeFeaturesAdd(__arg0, a, b, c, d, value);
         }
 
-        public static void UiOpenTypeFeaturesRemove(libui.UiOpenTypeFeatures otf, int8 a, int8 b, int8 c, int8 d)
+        public static void UiOpenTypeFeaturesRemove(libui.UiOpenTypeFeatures otf, char8 a, char8 b, char8 c, char8 d)
         {
             var __arg0 = otf == null ? null : otf.__Instance;
             __Internal.UiOpenTypeFeaturesRemove(__arg0, a, b, c, d);
         }
 
-        public static int32 UiOpenTypeFeaturesGet(libui.UiOpenTypeFeatures otf, int8 a, int8 b, int8 c, int8 d, ref uint32 value)
+        public static int32 UiOpenTypeFeaturesGet(libui.UiOpenTypeFeatures otf, char8 a, char8 b, char8 c, char8 d, ref uint32 value)
         {
             var __arg0 = otf == null ? null : otf.__Instance;
             uint32* __value5 = &value;
