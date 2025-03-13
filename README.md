@@ -32,8 +32,8 @@ class Program
 {
     static int32 OnClosing(__IntPtr w, __IntPtr data)
     {
-    	ui.UiQuit();
-    	return 1;
+        ui.UiQuit();
+        return 1;
     }
 
     static TTo Cast<TTo, TFrom>(TFrom val)
@@ -48,8 +48,8 @@ class Program
         var err = ui.UiInit(o);
         if (err != null) {
             Console.Error.WriteLine("Error initializing libui-ng: {0}", scope String(err));
-         	ui.UiFreeInitError(err);
-        	return 1;
+            ui.UiFreeInitError(err);
+            return 1;
         }
 
         // Create a new window
