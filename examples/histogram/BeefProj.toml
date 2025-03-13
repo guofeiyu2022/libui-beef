@@ -1,0 +1,7 @@
+FileVersion = 1
+Dependencies = {corlib = "*", libui-beef = "*"}
+
+[Project]
+Name = "histogram"
+TargetType = "BeefGUIApplication"
+StartupObject = "histogram.Program"

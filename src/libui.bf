@@ -319,13 +319,9 @@ namespace libui
             return result;
         }
 
-        public static UiInitOptions GetInstance(__IntPtr native)
+        public static UiInitOptions FromInternalPtr(__IntPtr native)
         {
-            UiInitOptions managed;
-            if (__TryGetNativeToManagedMapping(native, out managed))
-                return managed;
-            else
-                return null;
+            return __GetOrCreateInstance(native, true);
         }
 
         internal static UiInitOptions __CreateInstance(__Internal native, bool skipVTables = false)
@@ -453,13 +449,9 @@ namespace libui
             return result;
         }
 
-        public static UiWindow GetInstance(__IntPtr native)
+        public static UiWindow FromInternalPtr(__IntPtr native)
         {
-            UiWindow managed;
-            if (__TryGetNativeToManagedMapping(native, out managed))
-                return managed;
-            else
-                return null;
+            return __GetOrCreateInstance(native, true);
         }
 
         internal static UiWindow __CreateInstance(__Internal native, bool skipVTables = false)
@@ -546,13 +538,9 @@ namespace libui
             return result;
         }
 
-        public static UiButton GetInstance(__IntPtr native)
+        public static UiButton FromInternalPtr(__IntPtr native)
         {
-            UiButton managed;
-            if (__TryGetNativeToManagedMapping(native, out managed))
-                return managed;
-            else
-                return null;
+            return __GetOrCreateInstance(native, true);
         }
 
         internal static UiButton __CreateInstance(__Internal native, bool skipVTables = false)
@@ -639,13 +627,9 @@ namespace libui
             return result;
         }
 
-        public static UiBox GetInstance(__IntPtr native)
+        public static UiBox FromInternalPtr(__IntPtr native)
         {
-            UiBox managed;
-            if (__TryGetNativeToManagedMapping(native, out managed))
-                return managed;
-            else
-                return null;
+            return __GetOrCreateInstance(native, true);
         }
 
         internal static UiBox __CreateInstance(__Internal native, bool skipVTables = false)
@@ -732,13 +716,9 @@ namespace libui
             return result;
         }
 
-        public static UiCheckbox GetInstance(__IntPtr native)
+        public static UiCheckbox FromInternalPtr(__IntPtr native)
         {
-            UiCheckbox managed;
-            if (__TryGetNativeToManagedMapping(native, out managed))
-                return managed;
-            else
-                return null;
+            return __GetOrCreateInstance(native, true);
         }
 
         internal static UiCheckbox __CreateInstance(__Internal native, bool skipVTables = false)
@@ -825,13 +805,9 @@ namespace libui
             return result;
         }
 
-        public static UiEntry GetInstance(__IntPtr native)
+        public static UiEntry FromInternalPtr(__IntPtr native)
         {
-            UiEntry managed;
-            if (__TryGetNativeToManagedMapping(native, out managed))
-                return managed;
-            else
-                return null;
+            return __GetOrCreateInstance(native, true);
         }
 
         internal static UiEntry __CreateInstance(__Internal native, bool skipVTables = false)
@@ -918,13 +894,9 @@ namespace libui
             return result;
         }
 
-        public static UiLabel GetInstance(__IntPtr native)
+        public static UiLabel FromInternalPtr(__IntPtr native)
         {
-            UiLabel managed;
-            if (__TryGetNativeToManagedMapping(native, out managed))
-                return managed;
-            else
-                return null;
+            return __GetOrCreateInstance(native, true);
         }
 
         internal static UiLabel __CreateInstance(__Internal native, bool skipVTables = false)
@@ -1011,13 +983,9 @@ namespace libui
             return result;
         }
 
-        public static UiTab GetInstance(__IntPtr native)
+        public static UiTab FromInternalPtr(__IntPtr native)
         {
-            UiTab managed;
-            if (__TryGetNativeToManagedMapping(native, out managed))
-                return managed;
-            else
-                return null;
+            return __GetOrCreateInstance(native, true);
         }
 
         internal static UiTab __CreateInstance(__Internal native, bool skipVTables = false)
@@ -1104,13 +1072,9 @@ namespace libui
             return result;
         }
 
-        public static UiGroup GetInstance(__IntPtr native)
+        public static UiGroup FromInternalPtr(__IntPtr native)
         {
-            UiGroup managed;
-            if (__TryGetNativeToManagedMapping(native, out managed))
-                return managed;
-            else
-                return null;
+            return __GetOrCreateInstance(native, true);
         }
 
         internal static UiGroup __CreateInstance(__Internal native, bool skipVTables = false)
@@ -1197,13 +1161,9 @@ namespace libui
             return result;
         }
 
-        public static UiSpinbox GetInstance(__IntPtr native)
+        public static UiSpinbox FromInternalPtr(__IntPtr native)
         {
-            UiSpinbox managed;
-            if (__TryGetNativeToManagedMapping(native, out managed))
-                return managed;
-            else
-                return null;
+            return __GetOrCreateInstance(native, true);
         }
 
         internal static UiSpinbox __CreateInstance(__Internal native, bool skipVTables = false)
@@ -1290,13 +1250,9 @@ namespace libui
             return result;
         }
 
-        public static UiSlider GetInstance(__IntPtr native)
+        public static UiSlider FromInternalPtr(__IntPtr native)
         {
-            UiSlider managed;
-            if (__TryGetNativeToManagedMapping(native, out managed))
-                return managed;
-            else
-                return null;
+            return __GetOrCreateInstance(native, true);
         }
 
         internal static UiSlider __CreateInstance(__Internal native, bool skipVTables = false)
@@ -1383,13 +1339,9 @@ namespace libui
             return result;
         }
 
-        public static UiProgressBar GetInstance(__IntPtr native)
+        public static UiProgressBar FromInternalPtr(__IntPtr native)
         {
-            UiProgressBar managed;
-            if (__TryGetNativeToManagedMapping(native, out managed))
-                return managed;
-            else
-                return null;
+            return __GetOrCreateInstance(native, true);
         }
 
         internal static UiProgressBar __CreateInstance(__Internal native, bool skipVTables = false)
@@ -1476,13 +1428,9 @@ namespace libui
             return result;
         }
 
-        public static UiSeparator GetInstance(__IntPtr native)
+        public static UiSeparator FromInternalPtr(__IntPtr native)
         {
-            UiSeparator managed;
-            if (__TryGetNativeToManagedMapping(native, out managed))
-                return managed;
-            else
-                return null;
+            return __GetOrCreateInstance(native, true);
         }
 
         internal static UiSeparator __CreateInstance(__Internal native, bool skipVTables = false)
@@ -1569,13 +1517,9 @@ namespace libui
             return result;
         }
 
-        public static UiCombobox GetInstance(__IntPtr native)
+        public static UiCombobox FromInternalPtr(__IntPtr native)
         {
-            UiCombobox managed;
-            if (__TryGetNativeToManagedMapping(native, out managed))
-                return managed;
-            else
-                return null;
+            return __GetOrCreateInstance(native, true);
         }
 
         internal static UiCombobox __CreateInstance(__Internal native, bool skipVTables = false)
@@ -1662,13 +1606,9 @@ namespace libui
             return result;
         }
 
-        public static UiEditableCombobox GetInstance(__IntPtr native)
+        public static UiEditableCombobox FromInternalPtr(__IntPtr native)
         {
-            UiEditableCombobox managed;
-            if (__TryGetNativeToManagedMapping(native, out managed))
-                return managed;
-            else
-                return null;
+            return __GetOrCreateInstance(native, true);
         }
 
         internal static UiEditableCombobox __CreateInstance(__Internal native, bool skipVTables = false)
@@ -1755,13 +1695,9 @@ namespace libui
             return result;
         }
 
-        public static UiRadioButtons GetInstance(__IntPtr native)
+        public static UiRadioButtons FromInternalPtr(__IntPtr native)
         {
-            UiRadioButtons managed;
-            if (__TryGetNativeToManagedMapping(native, out managed))
-                return managed;
-            else
-                return null;
+            return __GetOrCreateInstance(native, true);
         }
 
         internal static UiRadioButtons __CreateInstance(__Internal native, bool skipVTables = false)
@@ -1848,13 +1784,9 @@ namespace libui
             return result;
         }
 
-        public static Tm GetInstance(__IntPtr native)
+        public static Tm FromInternalPtr(__IntPtr native)
         {
-            Tm managed;
-            if (__TryGetNativeToManagedMapping(native, out managed))
-                return managed;
-            else
-                return null;
+            return __GetOrCreateInstance(native, true);
         }
 
         internal static Tm __CreateInstance(__Internal native, bool skipVTables = false)
@@ -1941,13 +1873,9 @@ namespace libui
             return result;
         }
 
-        public static UiDateTimePicker GetInstance(__IntPtr native)
+        public static UiDateTimePicker FromInternalPtr(__IntPtr native)
         {
-            UiDateTimePicker managed;
-            if (__TryGetNativeToManagedMapping(native, out managed))
-                return managed;
-            else
-                return null;
+            return __GetOrCreateInstance(native, true);
         }
 
         internal static UiDateTimePicker __CreateInstance(__Internal native, bool skipVTables = false)
@@ -2034,13 +1962,9 @@ namespace libui
             return result;
         }
 
-        public static UiMultilineEntry GetInstance(__IntPtr native)
+        public static UiMultilineEntry FromInternalPtr(__IntPtr native)
         {
-            UiMultilineEntry managed;
-            if (__TryGetNativeToManagedMapping(native, out managed))
-                return managed;
-            else
-                return null;
+            return __GetOrCreateInstance(native, true);
         }
 
         internal static UiMultilineEntry __CreateInstance(__Internal native, bool skipVTables = false)
@@ -2127,13 +2051,9 @@ namespace libui
             return result;
         }
 
-        public static UiMenuItem GetInstance(__IntPtr native)
+        public static UiMenuItem FromInternalPtr(__IntPtr native)
         {
-            UiMenuItem managed;
-            if (__TryGetNativeToManagedMapping(native, out managed))
-                return managed;
-            else
-                return null;
+            return __GetOrCreateInstance(native, true);
         }
 
         internal static UiMenuItem __CreateInstance(__Internal native, bool skipVTables = false)
@@ -2220,13 +2140,9 @@ namespace libui
             return result;
         }
 
-        public static UiMenu GetInstance(__IntPtr native)
+        public static UiMenu FromInternalPtr(__IntPtr native)
         {
-            UiMenu managed;
-            if (__TryGetNativeToManagedMapping(native, out managed))
-                return managed;
-            else
-                return null;
+            return __GetOrCreateInstance(native, true);
         }
 
         internal static UiMenu __CreateInstance(__Internal native, bool skipVTables = false)
@@ -2313,13 +2229,9 @@ namespace libui
             return result;
         }
 
-        public static UiArea GetInstance(__IntPtr native)
+        public static UiArea FromInternalPtr(__IntPtr native)
         {
-            UiArea managed;
-            if (__TryGetNativeToManagedMapping(native, out managed))
-                return managed;
-            else
-                return null;
+            return __GetOrCreateInstance(native, true);
         }
 
         internal static UiArea __CreateInstance(__Internal native, bool skipVTables = false)
@@ -2406,13 +2318,9 @@ namespace libui
             return result;
         }
 
-        public static UiDrawContext GetInstance(__IntPtr native)
+        public static UiDrawContext FromInternalPtr(__IntPtr native)
         {
-            UiDrawContext managed;
-            if (__TryGetNativeToManagedMapping(native, out managed))
-                return managed;
-            else
-                return null;
+            return __GetOrCreateInstance(native, true);
         }
 
         internal static UiDrawContext __CreateInstance(__Internal native, bool skipVTables = false)
@@ -2499,13 +2407,9 @@ namespace libui
             return result;
         }
 
-        public static UiDrawPath GetInstance(__IntPtr native)
+        public static UiDrawPath FromInternalPtr(__IntPtr native)
         {
-            UiDrawPath managed;
-            if (__TryGetNativeToManagedMapping(native, out managed))
-                return managed;
-            else
-                return null;
+            return __GetOrCreateInstance(native, true);
         }
 
         internal static UiDrawPath __CreateInstance(__Internal native, bool skipVTables = false)
@@ -2592,13 +2496,9 @@ namespace libui
             return result;
         }
 
-        public static UiAttribute GetInstance(__IntPtr native)
+        public static UiAttribute FromInternalPtr(__IntPtr native)
         {
-            UiAttribute managed;
-            if (__TryGetNativeToManagedMapping(native, out managed))
-                return managed;
-            else
-                return null;
+            return __GetOrCreateInstance(native, true);
         }
 
         internal static UiAttribute __CreateInstance(__Internal native, bool skipVTables = false)
@@ -2685,13 +2585,9 @@ namespace libui
             return result;
         }
 
-        public static UiOpenTypeFeatures GetInstance(__IntPtr native)
+        public static UiOpenTypeFeatures FromInternalPtr(__IntPtr native)
         {
-            UiOpenTypeFeatures managed;
-            if (__TryGetNativeToManagedMapping(native, out managed))
-                return managed;
-            else
-                return null;
+            return __GetOrCreateInstance(native, true);
         }
 
         internal static UiOpenTypeFeatures __CreateInstance(__Internal native, bool skipVTables = false)
@@ -2778,13 +2674,9 @@ namespace libui
             return result;
         }
 
-        public static UiAttributedString GetInstance(__IntPtr native)
+        public static UiAttributedString FromInternalPtr(__IntPtr native)
         {
-            UiAttributedString managed;
-            if (__TryGetNativeToManagedMapping(native, out managed))
-                return managed;
-            else
-                return null;
+            return __GetOrCreateInstance(native, true);
         }
 
         internal static UiAttributedString __CreateInstance(__Internal native, bool skipVTables = false)
@@ -2871,13 +2763,9 @@ namespace libui
             return result;
         }
 
-        public static UiDrawTextLayout GetInstance(__IntPtr native)
+        public static UiDrawTextLayout FromInternalPtr(__IntPtr native)
         {
-            UiDrawTextLayout managed;
-            if (__TryGetNativeToManagedMapping(native, out managed))
-                return managed;
-            else
-                return null;
+            return __GetOrCreateInstance(native, true);
         }
 
         internal static UiDrawTextLayout __CreateInstance(__Internal native, bool skipVTables = false)
@@ -2964,13 +2852,9 @@ namespace libui
             return result;
         }
 
-        public static UiFontButton GetInstance(__IntPtr native)
+        public static UiFontButton FromInternalPtr(__IntPtr native)
         {
-            UiFontButton managed;
-            if (__TryGetNativeToManagedMapping(native, out managed))
-                return managed;
-            else
-                return null;
+            return __GetOrCreateInstance(native, true);
         }
 
         internal static UiFontButton __CreateInstance(__Internal native, bool skipVTables = false)
@@ -3057,13 +2941,9 @@ namespace libui
             return result;
         }
 
-        public static UiColorButton GetInstance(__IntPtr native)
+        public static UiColorButton FromInternalPtr(__IntPtr native)
         {
-            UiColorButton managed;
-            if (__TryGetNativeToManagedMapping(native, out managed))
-                return managed;
-            else
-                return null;
+            return __GetOrCreateInstance(native, true);
         }
 
         internal static UiColorButton __CreateInstance(__Internal native, bool skipVTables = false)
@@ -3150,13 +3030,9 @@ namespace libui
             return result;
         }
 
-        public static UiForm GetInstance(__IntPtr native)
+        public static UiForm FromInternalPtr(__IntPtr native)
         {
-            UiForm managed;
-            if (__TryGetNativeToManagedMapping(native, out managed))
-                return managed;
-            else
-                return null;
+            return __GetOrCreateInstance(native, true);
         }
 
         internal static UiForm __CreateInstance(__Internal native, bool skipVTables = false)
@@ -3243,13 +3119,9 @@ namespace libui
             return result;
         }
 
-        public static UiGrid GetInstance(__IntPtr native)
+        public static UiGrid FromInternalPtr(__IntPtr native)
         {
-            UiGrid managed;
-            if (__TryGetNativeToManagedMapping(native, out managed))
-                return managed;
-            else
-                return null;
+            return __GetOrCreateInstance(native, true);
         }
 
         internal static UiGrid __CreateInstance(__Internal native, bool skipVTables = false)
@@ -3336,13 +3208,9 @@ namespace libui
             return result;
         }
 
-        public static UiImage GetInstance(__IntPtr native)
+        public static UiImage FromInternalPtr(__IntPtr native)
         {
-            UiImage managed;
-            if (__TryGetNativeToManagedMapping(native, out managed))
-                return managed;
-            else
-                return null;
+            return __GetOrCreateInstance(native, true);
         }
 
         internal static UiImage __CreateInstance(__Internal native, bool skipVTables = false)
@@ -3429,13 +3297,9 @@ namespace libui
             return result;
         }
 
-        public static UiTableValue GetInstance(__IntPtr native)
+        public static UiTableValue FromInternalPtr(__IntPtr native)
         {
-            UiTableValue managed;
-            if (__TryGetNativeToManagedMapping(native, out managed))
-                return managed;
-            else
-                return null;
+            return __GetOrCreateInstance(native, true);
         }
 
         internal static UiTableValue __CreateInstance(__Internal native, bool skipVTables = false)
@@ -3522,13 +3386,9 @@ namespace libui
             return result;
         }
 
-        public static UiTableModel GetInstance(__IntPtr native)
+        public static UiTableModel FromInternalPtr(__IntPtr native)
         {
-            UiTableModel managed;
-            if (__TryGetNativeToManagedMapping(native, out managed))
-                return managed;
-            else
-                return null;
+            return __GetOrCreateInstance(native, true);
         }
 
         internal static UiTableModel __CreateInstance(__Internal native, bool skipVTables = false)
@@ -3615,13 +3475,9 @@ namespace libui
             return result;
         }
 
-        public static UiTable GetInstance(__IntPtr native)
+        public static UiTable FromInternalPtr(__IntPtr native)
         {
-            UiTable managed;
-            if (__TryGetNativeToManagedMapping(native, out managed))
-                return managed;
-            else
-                return null;
+            return __GetOrCreateInstance(native, true);
         }
 
         internal static UiTable __CreateInstance(__Internal native, bool skipVTables = false)
@@ -3726,13 +3582,9 @@ namespace libui
             return result;
         }
 
-        public static UiControl GetInstance(__IntPtr native)
+        public static UiControl FromInternalPtr(__IntPtr native)
         {
-            UiControl managed;
-            if (__TryGetNativeToManagedMapping(native, out managed))
-                return managed;
-            else
-                return null;
+            return __GetOrCreateInstance(native, true);
         }
 
         internal static UiControl __CreateInstance(__Internal native, bool skipVTables = false)
@@ -4049,13 +3901,9 @@ namespace libui
             return result;
         }
 
-        public static UiAreaHandler GetInstance(__IntPtr native)
+        public static UiAreaHandler FromInternalPtr(__IntPtr native)
         {
-            UiAreaHandler managed;
-            if (__TryGetNativeToManagedMapping(native, out managed))
-                return managed;
-            else
-                return null;
+            return __GetOrCreateInstance(native, true);
         }
 
         internal static UiAreaHandler __CreateInstance(__Internal native, bool skipVTables = false)
@@ -4251,13 +4099,9 @@ namespace libui
             return result;
         }
 
-        public static UiAreaDrawParams GetInstance(__IntPtr native)
+        public static UiAreaDrawParams FromInternalPtr(__IntPtr native)
         {
-            UiAreaDrawParams managed;
-            if (__TryGetNativeToManagedMapping(native, out managed))
-                return managed;
-            else
-                return null;
+            return __GetOrCreateInstance(native, true);
         }
 
         internal static UiAreaDrawParams __CreateInstance(__Internal native, bool skipVTables = false)
@@ -4474,13 +4318,9 @@ namespace libui
             return result;
         }
 
-        public static UiDrawMatrix GetInstance(__IntPtr native)
+        public static UiDrawMatrix FromInternalPtr(__IntPtr native)
         {
-            UiDrawMatrix managed;
-            if (__TryGetNativeToManagedMapping(native, out managed))
-                return managed;
-            else
-                return null;
+            return __GetOrCreateInstance(native, true);
         }
 
         internal static UiDrawMatrix __CreateInstance(__Internal native, bool skipVTables = false)
@@ -4689,13 +4529,9 @@ namespace libui
             return result;
         }
 
-        public static UiDrawBrush GetInstance(__IntPtr native)
+        public static UiDrawBrush FromInternalPtr(__IntPtr native)
         {
-            UiDrawBrush managed;
-            if (__TryGetNativeToManagedMapping(native, out managed))
-                return managed;
-            else
-                return null;
+            return __GetOrCreateInstance(native, true);
         }
 
         internal static UiDrawBrush __CreateInstance(__Internal native, bool skipVTables = false)
@@ -4976,13 +4812,9 @@ namespace libui
             return result;
         }
 
-        public static UiDrawBrushGradientStop GetInstance(__IntPtr native)
+        public static UiDrawBrushGradientStop FromInternalPtr(__IntPtr native)
         {
-            UiDrawBrushGradientStop managed;
-            if (__TryGetNativeToManagedMapping(native, out managed))
-                return managed;
-            else
-                return null;
+            return __GetOrCreateInstance(native, true);
         }
 
         internal static UiDrawBrushGradientStop __CreateInstance(__Internal native, bool skipVTables = false)
@@ -5173,13 +5005,9 @@ namespace libui
             return result;
         }
 
-        public static UiDrawStrokeParams GetInstance(__IntPtr native)
+        public static UiDrawStrokeParams FromInternalPtr(__IntPtr native)
         {
-            UiDrawStrokeParams managed;
-            if (__TryGetNativeToManagedMapping(native, out managed))
-                return managed;
-            else
-                return null;
+            return __GetOrCreateInstance(native, true);
         }
 
         internal static UiDrawStrokeParams __CreateInstance(__Internal native, bool skipVTables = false)
@@ -5394,13 +5222,9 @@ namespace libui
             return result;
         }
 
-        public static UiFontDescriptor GetInstance(__IntPtr native)
+        public static UiFontDescriptor FromInternalPtr(__IntPtr native)
         {
-            UiFontDescriptor managed;
-            if (__TryGetNativeToManagedMapping(native, out managed))
-                return managed;
-            else
-                return null;
+            return __GetOrCreateInstance(native, true);
         }
 
         internal static UiFontDescriptor __CreateInstance(__Internal native, bool skipVTables = false)
@@ -5588,13 +5412,9 @@ namespace libui
             return result;
         }
 
-        public static UiDrawTextLayoutParams GetInstance(__IntPtr native)
+        public static UiDrawTextLayoutParams FromInternalPtr(__IntPtr native)
         {
-            UiDrawTextLayoutParams managed;
-            if (__TryGetNativeToManagedMapping(native, out managed))
-                return managed;
-            else
-                return null;
+            return __GetOrCreateInstance(native, true);
         }
 
         internal static UiDrawTextLayoutParams __CreateInstance(__Internal native, bool skipVTables = false)
@@ -5776,13 +5596,9 @@ namespace libui
             return result;
         }
 
-        public static UiAreaMouseEvent GetInstance(__IntPtr native)
+        public static UiAreaMouseEvent FromInternalPtr(__IntPtr native)
         {
-            UiAreaMouseEvent managed;
-            if (__TryGetNativeToManagedMapping(native, out managed))
-                return managed;
-            else
-                return null;
+            return __GetOrCreateInstance(native, true);
         }
 
         internal static UiAreaMouseEvent __CreateInstance(__Internal native, bool skipVTables = false)
@@ -6023,13 +5839,9 @@ namespace libui
             return result;
         }
 
-        public static UiAreaKeyEvent GetInstance(__IntPtr native)
+        public static UiAreaKeyEvent FromInternalPtr(__IntPtr native)
         {
-            UiAreaKeyEvent managed;
-            if (__TryGetNativeToManagedMapping(native, out managed))
-                return managed;
-            else
-                return null;
+            return __GetOrCreateInstance(native, true);
         }
 
         internal static UiAreaKeyEvent __CreateInstance(__Internal native, bool skipVTables = false)
@@ -6218,13 +6030,9 @@ namespace libui
             return result;
         }
 
-        public static UiTableModelHandler GetInstance(__IntPtr native)
+        public static UiTableModelHandler FromInternalPtr(__IntPtr native)
         {
-            UiTableModelHandler managed;
-            if (__TryGetNativeToManagedMapping(native, out managed))
-                return managed;
-            else
-                return null;
+            return __GetOrCreateInstance(native, true);
         }
 
         internal static UiTableModelHandler __CreateInstance(__Internal native, bool skipVTables = false)
@@ -6445,13 +6253,9 @@ namespace libui
             return result;
         }
 
-        public static UiTableTextColumnOptionalParams GetInstance(__IntPtr native)
+        public static UiTableTextColumnOptionalParams FromInternalPtr(__IntPtr native)
         {
-            UiTableTextColumnOptionalParams managed;
-            if (__TryGetNativeToManagedMapping(native, out managed))
-                return managed;
-            else
-                return null;
+            return __GetOrCreateInstance(native, true);
         }
 
         internal static UiTableTextColumnOptionalParams __CreateInstance(__Internal native, bool skipVTables = false)
@@ -6591,13 +6395,9 @@ namespace libui
             return result;
         }
 
-        public static UiTableParams GetInstance(__IntPtr native)
+        public static UiTableParams FromInternalPtr(__IntPtr native)
         {
-            UiTableParams managed;
-            if (__TryGetNativeToManagedMapping(native, out managed))
-                return managed;
-            else
-                return null;
+            return __GetOrCreateInstance(native, true);
         }
 
         internal static UiTableParams __CreateInstance(__Internal native, bool skipVTables = false)
@@ -6752,13 +6552,9 @@ namespace libui
             return result;
         }
 
-        public static UiTableSelection GetInstance(__IntPtr native)
+        public static UiTableSelection FromInternalPtr(__IntPtr native)
         {
-            UiTableSelection managed;
-            if (__TryGetNativeToManagedMapping(native, out managed))
-                return managed;
-            else
-                return null;
+            return __GetOrCreateInstance(native, true);
         }
 
         internal static UiTableSelection __CreateInstance(__Internal native, bool skipVTables = false)

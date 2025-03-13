@@ -129,7 +129,7 @@ class Program
         var button = ui.UiNewButton("  Open File  ");
         entry1 = ui.UiNewEntry();
         ui.UiEntrySetReadOnly(entry1, 1);
-        ui.UiButtonOnClicked(button, scope => onOpenFileClicked, &entry1);
+        ui.UiButtonOnClicked(button, scope => onOpenFileClicked, entry1.__Instance);
         ui.UiGridAppend(grid, Cast<UiControl...>(button),
         	0, 0, 1, 1,
         	0, (uint32)UiAlign.UiAlignFill, 0, (uint32)UiAlign.UiAlignFill);
@@ -140,7 +140,7 @@ class Program
         button = ui.UiNewButton("  Open Folder  ");
         entry2 = ui.UiNewEntry();
         ui.UiEntrySetReadOnly(entry2, 1);
-        ui.UiButtonOnClicked(button, scope => onOpenFolderClicked, &entry2);
+        ui.UiButtonOnClicked(button, scope => onOpenFolderClicked, entry2.__Instance);
         ui.UiGridAppend(grid, Cast<UiControl...>(button),
         	0, 1, 1, 1,
         	0, (uint32)UiAlign.UiAlignFill, 0, (uint32)UiAlign.UiAlignFill);
@@ -151,7 +151,7 @@ class Program
         button = ui.UiNewButton("  Save File  ");
         entry3 = ui.UiNewEntry();
         ui.UiEntrySetReadOnly(entry3, 1);
-        ui.UiButtonOnClicked(button, scope => onSaveFileClicked, &entry3);
+        ui.UiButtonOnClicked(button, scope => onSaveFileClicked, entry3.__Instance);
         ui.UiGridAppend(grid, Cast<UiControl...>(button),
         	0, 2, 1, 1,
         	0, (uint32)UiAlign.UiAlignFill, 0, (uint32)UiAlign.UiAlignFill);
@@ -179,10 +179,15 @@ class Program
         return Cast<UiControl...>(hbox);
     }
 
-    static void Main()
+    static int Main()
     {
         var o = scope UiInitOptions();
-        ui.UiInit(o);
+        var err = ui.UiInit(o);
+        if (err != null) {
+            Console.Error.WriteLine("Error initializing libui-ng: {0}", scope String(err));
+         	ui.UiFreeInitError(err);
+        	return 1;
+        }
 
         var menu = ui.UiNewMenu("File");
         var item = ui.UiMenuAppendItem(menu, "Open");
@@ -206,7 +211,7 @@ class Program
 
         mainWin = ui.UiNewWindow("libui Control Gallery", 640, 480, 1);
         ui.UiWindowOnClosing(mainWin, scope => onClosing, null);
-        ui.UiOnShouldQuit(scope => shouldQuit, &mainWin);
+        ui.UiOnShouldQuit(scope => shouldQuit, mainWin.__Instance);
 
         var tab = ui.UiNewTab();
         ui.UiWindowSetChild(mainWin, Cast<UiControl...>(tab));
@@ -224,6 +229,7 @@ class Program
         ui.UiControlShow(Cast<UiControl...>(mainWin));
         ui.UiMain();
         ui.UiUninit();
+        return 0;
     }
 
     #region control events
@@ -235,7 +241,7 @@ class Program
 
     static void openClicked(__IntPtr item, __IntPtr w, __IntPtr data)
     {
-        var wind = Cast<UiWindow>(w);
+        var wind = UiWindow.FromInternalPtr(w);
     	var filename = ui.UiOpenFile(wind);
     	if (filename == null) {
     		ui.UiMsgBoxError(mainWin, "No file selected", "Don't be alarmed!");
@@ -269,28 +275,28 @@ class Program
 
     static int32 shouldQuit(__IntPtr data)
     {
-    	var win = Cast<UiWindow>(data);
+    	var win = UiWindow.FromInternalPtr(data);
         ui.UiControlDestroy(Cast<UiControl...>(win));
         return 1;
     }
 
     static void onSpinboxChanged(__IntPtr s, __IntPtr data)
     {
-        var sb = UiSpinbox.GetInstance(s);
+        var sb = UiSpinbox.FromInternalPtr(s);
         ui.UiSliderSetValue(slider, ui.UiSpinboxValue(sb));
         ui.UiProgressBarSetValue(pbar, ui.UiSpinboxValue(sb));
     }
 
     static void onSliderChanged(__IntPtr s, __IntPtr data)
     {
-        var sl = UiSlider.GetInstance(s);
+        var sl = UiSlider.FromInternalPtr(s);
         ui.UiSpinboxSetValue(spinbox, ui.UiSliderValue(sl));
     	ui.UiProgressBarSetValue(pbar, ui.UiSliderValue(sl));
     }
 
     static void onOpenFileClicked(__IntPtr b, __IntPtr data)
     {
-    	var entry = Cast<UiEntry>(data);
+    	var entry = UiEntry.FromInternalPtr(data);
     	var filename = ui.UiOpenFile(mainWin);
     	if (filename == null) {
     		ui.UiEntrySetText(entry, "(cancelled)");
@@ -302,7 +308,7 @@ class Program
 
     static void onOpenFolderClicked(__IntPtr b, __IntPtr data)
     {
-    	var entry = Cast<UiEntry>(data);
+    	var entry = UiEntry.FromInternalPtr(data);
 
     	var filename = ui.UiOpenFolder(mainWin);
     	if (filename == null) {
@@ -315,7 +321,7 @@ class Program
 
     static void onSaveFileClicked(__IntPtr b, __IntPtr data)
     {
-    	var entry = Cast<UiEntry>(data);
+    	var entry = UiEntry.FromInternalPtr(data);
 
     	var filename = ui.UiSaveFile(mainWin);
     	if (filename == null) {
@@ -347,12 +353,6 @@ class Program
     {
         var val;
         return *(TTo*)&val;
-    }
-
-    static TTo Cast<TTo>(__IntPtr val)
-    {
-        var val;
-        return *(TTo*)val;
     }
     #endregion
 }
