@@ -59,12 +59,12 @@ class Program
 
   1. In IDE, right clicks "Workspace" node, selects "Add From Remote...".
 
-    ![from_remote1](images/from_remote1.png)
+  <img src="images/from_remote1.png" alt="add from remote" width="50%" />
 
   2. In opened dialog, inputs project URL for libui-beef.
 
-    ![from_remote2](images/from_remote2.png)
+  <img src="images/from_remote2.png" alt="input remote url" width="50%" />
 
   3. You can refresh newest libui-beef by right clicking "libui-beef" node, then selecting "Update Version Lock".
 
-    ![update_lock](images/update_lock.png)
+  <img src="images/update_lock.png" alt="update version lock" width="50%" />
