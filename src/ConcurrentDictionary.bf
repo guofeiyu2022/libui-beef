@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using System.Threading;
 
-namespace System.Collections.Concurrent
+namespace libui
 {
     public class ConcurrentDictionary<TKey, TValue> : Dictionary<TKey, TValue> where TKey : IHashable
     {

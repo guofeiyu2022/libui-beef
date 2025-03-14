@@ -271,7 +271,7 @@ namespace libui
         public __IntPtr __Instance { get; protected set; }
 
         internal static readonly var NativeToManagedMap =
-            new System.Collections.Concurrent.ConcurrentDictionary<__IntPtr, libui.UiInitOptions>() ~ DeleteNativeToManagedMap!(_);
+            new libui.ConcurrentDictionary<__IntPtr, libui.UiInitOptions>() ~ DeleteNativeToManagedMap!(_);
 
         private static mixin DeleteNativeToManagedMap(var container)
         {
@@ -398,7 +398,7 @@ namespace libui
         public __IntPtr __Instance { get; protected set; }
 
         internal static readonly var NativeToManagedMap =
-            new System.Collections.Concurrent.ConcurrentDictionary<__IntPtr, libui.UiWindow>() ~ DeleteNativeToManagedMap!(_);
+            new libui.ConcurrentDictionary<__IntPtr, libui.UiWindow>() ~ DeleteNativeToManagedMap!(_);
 
         private static mixin DeleteNativeToManagedMap(var container)
         {
@@ -487,7 +487,7 @@ namespace libui
         public __IntPtr __Instance { get; protected set; }
 
         internal static readonly var NativeToManagedMap =
-            new System.Collections.Concurrent.ConcurrentDictionary<__IntPtr, libui.UiButton>() ~ DeleteNativeToManagedMap!(_);
+            new libui.ConcurrentDictionary<__IntPtr, libui.UiButton>() ~ DeleteNativeToManagedMap!(_);
 
         private static mixin DeleteNativeToManagedMap(var container)
         {
@@ -576,7 +576,7 @@ namespace libui
         public __IntPtr __Instance { get; protected set; }
 
         internal static readonly var NativeToManagedMap =
-            new System.Collections.Concurrent.ConcurrentDictionary<__IntPtr, libui.UiBox>() ~ DeleteNativeToManagedMap!(_);
+            new libui.ConcurrentDictionary<__IntPtr, libui.UiBox>() ~ DeleteNativeToManagedMap!(_);
 
         private static mixin DeleteNativeToManagedMap(var container)
         {
@@ -665,7 +665,7 @@ namespace libui
         public __IntPtr __Instance { get; protected set; }
 
         internal static readonly var NativeToManagedMap =
-            new System.Collections.Concurrent.ConcurrentDictionary<__IntPtr, libui.UiCheckbox>() ~ DeleteNativeToManagedMap!(_);
+            new libui.ConcurrentDictionary<__IntPtr, libui.UiCheckbox>() ~ DeleteNativeToManagedMap!(_);
 
         private static mixin DeleteNativeToManagedMap(var container)
         {
@@ -754,7 +754,7 @@ namespace libui
         public __IntPtr __Instance { get; protected set; }
 
         internal static readonly var NativeToManagedMap =
-            new System.Collections.Concurrent.ConcurrentDictionary<__IntPtr, libui.UiEntry>() ~ DeleteNativeToManagedMap!(_);
+            new libui.ConcurrentDictionary<__IntPtr, libui.UiEntry>() ~ DeleteNativeToManagedMap!(_);
 
         private static mixin DeleteNativeToManagedMap(var container)
         {
@@ -843,7 +843,7 @@ namespace libui
         public __IntPtr __Instance { get; protected set; }
 
         internal static readonly var NativeToManagedMap =
-            new System.Collections.Concurrent.ConcurrentDictionary<__IntPtr, libui.UiLabel>() ~ DeleteNativeToManagedMap!(_);
+            new libui.ConcurrentDictionary<__IntPtr, libui.UiLabel>() ~ DeleteNativeToManagedMap!(_);
 
         private static mixin DeleteNativeToManagedMap(var container)
         {
@@ -932,7 +932,7 @@ namespace libui
         public __IntPtr __Instance { get; protected set; }
 
         internal static readonly var NativeToManagedMap =
-            new System.Collections.Concurrent.ConcurrentDictionary<__IntPtr, libui.UiTab>() ~ DeleteNativeToManagedMap!(_);
+            new libui.ConcurrentDictionary<__IntPtr, libui.UiTab>() ~ DeleteNativeToManagedMap!(_);
 
         private static mixin DeleteNativeToManagedMap(var container)
         {
@@ -1021,7 +1021,7 @@ namespace libui
         public __IntPtr __Instance { get; protected set; }
 
         internal static readonly var NativeToManagedMap =
-            new System.Collections.Concurrent.ConcurrentDictionary<__IntPtr, libui.UiGroup>() ~ DeleteNativeToManagedMap!(_);
+            new libui.ConcurrentDictionary<__IntPtr, libui.UiGroup>() ~ DeleteNativeToManagedMap!(_);
 
         private static mixin DeleteNativeToManagedMap(var container)
         {
@@ -1110,7 +1110,7 @@ namespace libui
         public __IntPtr __Instance { get; protected set; }
 
         internal static readonly var NativeToManagedMap =
-            new System.Collections.Concurrent.ConcurrentDictionary<__IntPtr, libui.UiSpinbox>() ~ DeleteNativeToManagedMap!(_);
+            new libui.ConcurrentDictionary<__IntPtr, libui.UiSpinbox>() ~ DeleteNativeToManagedMap!(_);
 
         private static mixin DeleteNativeToManagedMap(var container)
         {
@@ -1199,7 +1199,7 @@ namespace libui
         public __IntPtr __Instance { get; protected set; }
 
         internal static readonly var NativeToManagedMap =
-            new System.Collections.Concurrent.ConcurrentDictionary<__IntPtr, libui.UiSlider>() ~ DeleteNativeToManagedMap!(_);
+            new libui.ConcurrentDictionary<__IntPtr, libui.UiSlider>() ~ DeleteNativeToManagedMap!(_);
 
         private static mixin DeleteNativeToManagedMap(var container)
         {
@@ -1288,7 +1288,7 @@ namespace libui
         public __IntPtr __Instance { get; protected set; }
 
         internal static readonly var NativeToManagedMap =
-            new System.Collections.Concurrent.ConcurrentDictionary<__IntPtr, libui.UiProgressBar>() ~ DeleteNativeToManagedMap!(_);
+            new libui.ConcurrentDictionary<__IntPtr, libui.UiProgressBar>() ~ DeleteNativeToManagedMap!(_);
 
         private static mixin DeleteNativeToManagedMap(var container)
         {
@@ -1377,7 +1377,7 @@ namespace libui
         public __IntPtr __Instance { get; protected set; }
 
         internal static readonly var NativeToManagedMap =
-            new System.Collections.Concurrent.ConcurrentDictionary<__IntPtr, libui.UiSeparator>() ~ DeleteNativeToManagedMap!(_);
+            new libui.ConcurrentDictionary<__IntPtr, libui.UiSeparator>() ~ DeleteNativeToManagedMap!(_);
 
         private static mixin DeleteNativeToManagedMap(var container)
         {
@@ -1466,7 +1466,7 @@ namespace libui
         public __IntPtr __Instance { get; protected set; }
 
         internal static readonly var NativeToManagedMap =
-            new System.Collections.Concurrent.ConcurrentDictionary<__IntPtr, libui.UiCombobox>() ~ DeleteNativeToManagedMap!(_);
+            new libui.ConcurrentDictionary<__IntPtr, libui.UiCombobox>() ~ DeleteNativeToManagedMap!(_);
 
         private static mixin DeleteNativeToManagedMap(var container)
         {
@@ -1555,7 +1555,7 @@ namespace libui
         public __IntPtr __Instance { get; protected set; }
 
         internal static readonly var NativeToManagedMap =
-            new System.Collections.Concurrent.ConcurrentDictionary<__IntPtr, libui.UiEditableCombobox>() ~ DeleteNativeToManagedMap!(_);
+            new libui.ConcurrentDictionary<__IntPtr, libui.UiEditableCombobox>() ~ DeleteNativeToManagedMap!(_);
 
         private static mixin DeleteNativeToManagedMap(var container)
         {
@@ -1644,7 +1644,7 @@ namespace libui
         public __IntPtr __Instance { get; protected set; }
 
         internal static readonly var NativeToManagedMap =
-            new System.Collections.Concurrent.ConcurrentDictionary<__IntPtr, libui.UiRadioButtons>() ~ DeleteNativeToManagedMap!(_);
+            new libui.ConcurrentDictionary<__IntPtr, libui.UiRadioButtons>() ~ DeleteNativeToManagedMap!(_);
 
         private static mixin DeleteNativeToManagedMap(var container)
         {
@@ -1733,7 +1733,7 @@ namespace libui
         public __IntPtr __Instance { get; protected set; }
 
         internal static readonly var NativeToManagedMap =
-            new System.Collections.Concurrent.ConcurrentDictionary<__IntPtr, libui.Tm>() ~ DeleteNativeToManagedMap!(_);
+            new libui.ConcurrentDictionary<__IntPtr, libui.Tm>() ~ DeleteNativeToManagedMap!(_);
 
         private static mixin DeleteNativeToManagedMap(var container)
         {
@@ -1822,7 +1822,7 @@ namespace libui
         public __IntPtr __Instance { get; protected set; }
 
         internal static readonly var NativeToManagedMap =
-            new System.Collections.Concurrent.ConcurrentDictionary<__IntPtr, libui.UiDateTimePicker>() ~ DeleteNativeToManagedMap!(_);
+            new libui.ConcurrentDictionary<__IntPtr, libui.UiDateTimePicker>() ~ DeleteNativeToManagedMap!(_);
 
         private static mixin DeleteNativeToManagedMap(var container)
         {
@@ -1911,7 +1911,7 @@ namespace libui
         public __IntPtr __Instance { get; protected set; }
 
         internal static readonly var NativeToManagedMap =
-            new System.Collections.Concurrent.ConcurrentDictionary<__IntPtr, libui.UiMultilineEntry>() ~ DeleteNativeToManagedMap!(_);
+            new libui.ConcurrentDictionary<__IntPtr, libui.UiMultilineEntry>() ~ DeleteNativeToManagedMap!(_);
 
         private static mixin DeleteNativeToManagedMap(var container)
         {
@@ -2000,7 +2000,7 @@ namespace libui
         public __IntPtr __Instance { get; protected set; }
 
         internal static readonly var NativeToManagedMap =
-            new System.Collections.Concurrent.ConcurrentDictionary<__IntPtr, libui.UiMenuItem>() ~ DeleteNativeToManagedMap!(_);
+            new libui.ConcurrentDictionary<__IntPtr, libui.UiMenuItem>() ~ DeleteNativeToManagedMap!(_);
 
         private static mixin DeleteNativeToManagedMap(var container)
         {
@@ -2089,7 +2089,7 @@ namespace libui
         public __IntPtr __Instance { get; protected set; }
 
         internal static readonly var NativeToManagedMap =
-            new System.Collections.Concurrent.ConcurrentDictionary<__IntPtr, libui.UiMenu>() ~ DeleteNativeToManagedMap!(_);
+            new libui.ConcurrentDictionary<__IntPtr, libui.UiMenu>() ~ DeleteNativeToManagedMap!(_);
 
         private static mixin DeleteNativeToManagedMap(var container)
         {
@@ -2178,7 +2178,7 @@ namespace libui
         public __IntPtr __Instance { get; protected set; }
 
         internal static readonly var NativeToManagedMap =
-            new System.Collections.Concurrent.ConcurrentDictionary<__IntPtr, libui.UiArea>() ~ DeleteNativeToManagedMap!(_);
+            new libui.ConcurrentDictionary<__IntPtr, libui.UiArea>() ~ DeleteNativeToManagedMap!(_);
 
         private static mixin DeleteNativeToManagedMap(var container)
         {
@@ -2267,7 +2267,7 @@ namespace libui
         public __IntPtr __Instance { get; protected set; }
 
         internal static readonly var NativeToManagedMap =
-            new System.Collections.Concurrent.ConcurrentDictionary<__IntPtr, libui.UiDrawContext>() ~ DeleteNativeToManagedMap!(_);
+            new libui.ConcurrentDictionary<__IntPtr, libui.UiDrawContext>() ~ DeleteNativeToManagedMap!(_);
 
         private static mixin DeleteNativeToManagedMap(var container)
         {
@@ -2356,7 +2356,7 @@ namespace libui
         public __IntPtr __Instance { get; protected set; }
 
         internal static readonly var NativeToManagedMap =
-            new System.Collections.Concurrent.ConcurrentDictionary<__IntPtr, libui.UiDrawPath>() ~ DeleteNativeToManagedMap!(_);
+            new libui.ConcurrentDictionary<__IntPtr, libui.UiDrawPath>() ~ DeleteNativeToManagedMap!(_);
 
         private static mixin DeleteNativeToManagedMap(var container)
         {
@@ -2445,7 +2445,7 @@ namespace libui
         public __IntPtr __Instance { get; protected set; }
 
         internal static readonly var NativeToManagedMap =
-            new System.Collections.Concurrent.ConcurrentDictionary<__IntPtr, libui.UiAttribute>() ~ DeleteNativeToManagedMap!(_);
+            new libui.ConcurrentDictionary<__IntPtr, libui.UiAttribute>() ~ DeleteNativeToManagedMap!(_);
 
         private static mixin DeleteNativeToManagedMap(var container)
         {
@@ -2534,7 +2534,7 @@ namespace libui
         public __IntPtr __Instance { get; protected set; }
 
         internal static readonly var NativeToManagedMap =
-            new System.Collections.Concurrent.ConcurrentDictionary<__IntPtr, libui.UiOpenTypeFeatures>() ~ DeleteNativeToManagedMap!(_);
+            new libui.ConcurrentDictionary<__IntPtr, libui.UiOpenTypeFeatures>() ~ DeleteNativeToManagedMap!(_);
 
         private static mixin DeleteNativeToManagedMap(var container)
         {
@@ -2623,7 +2623,7 @@ namespace libui
         public __IntPtr __Instance { get; protected set; }
 
         internal static readonly var NativeToManagedMap =
-            new System.Collections.Concurrent.ConcurrentDictionary<__IntPtr, libui.UiAttributedString>() ~ DeleteNativeToManagedMap!(_);
+            new libui.ConcurrentDictionary<__IntPtr, libui.UiAttributedString>() ~ DeleteNativeToManagedMap!(_);
 
         private static mixin DeleteNativeToManagedMap(var container)
         {
@@ -2712,7 +2712,7 @@ namespace libui
         public __IntPtr __Instance { get; protected set; }
 
         internal static readonly var NativeToManagedMap =
-            new System.Collections.Concurrent.ConcurrentDictionary<__IntPtr, libui.UiDrawTextLayout>() ~ DeleteNativeToManagedMap!(_);
+            new libui.ConcurrentDictionary<__IntPtr, libui.UiDrawTextLayout>() ~ DeleteNativeToManagedMap!(_);
 
         private static mixin DeleteNativeToManagedMap(var container)
         {
@@ -2801,7 +2801,7 @@ namespace libui
         public __IntPtr __Instance { get; protected set; }
 
         internal static readonly var NativeToManagedMap =
-            new System.Collections.Concurrent.ConcurrentDictionary<__IntPtr, libui.UiFontButton>() ~ DeleteNativeToManagedMap!(_);
+            new libui.ConcurrentDictionary<__IntPtr, libui.UiFontButton>() ~ DeleteNativeToManagedMap!(_);
 
         private static mixin DeleteNativeToManagedMap(var container)
         {
@@ -2890,7 +2890,7 @@ namespace libui
         public __IntPtr __Instance { get; protected set; }
 
         internal static readonly var NativeToManagedMap =
-            new System.Collections.Concurrent.ConcurrentDictionary<__IntPtr, libui.UiColorButton>() ~ DeleteNativeToManagedMap!(_);
+            new libui.ConcurrentDictionary<__IntPtr, libui.UiColorButton>() ~ DeleteNativeToManagedMap!(_);
 
         private static mixin DeleteNativeToManagedMap(var container)
         {
@@ -2979,7 +2979,7 @@ namespace libui
         public __IntPtr __Instance { get; protected set; }
 
         internal static readonly var NativeToManagedMap =
-            new System.Collections.Concurrent.ConcurrentDictionary<__IntPtr, libui.UiForm>() ~ DeleteNativeToManagedMap!(_);
+            new libui.ConcurrentDictionary<__IntPtr, libui.UiForm>() ~ DeleteNativeToManagedMap!(_);
 
         private static mixin DeleteNativeToManagedMap(var container)
         {
@@ -3068,7 +3068,7 @@ namespace libui
         public __IntPtr __Instance { get; protected set; }
 
         internal static readonly var NativeToManagedMap =
-            new System.Collections.Concurrent.ConcurrentDictionary<__IntPtr, libui.UiGrid>() ~ DeleteNativeToManagedMap!(_);
+            new libui.ConcurrentDictionary<__IntPtr, libui.UiGrid>() ~ DeleteNativeToManagedMap!(_);
 
         private static mixin DeleteNativeToManagedMap(var container)
         {
@@ -3157,7 +3157,7 @@ namespace libui
         public __IntPtr __Instance { get; protected set; }
 
         internal static readonly var NativeToManagedMap =
-            new System.Collections.Concurrent.ConcurrentDictionary<__IntPtr, libui.UiImage>() ~ DeleteNativeToManagedMap!(_);
+            new libui.ConcurrentDictionary<__IntPtr, libui.UiImage>() ~ DeleteNativeToManagedMap!(_);
 
         private static mixin DeleteNativeToManagedMap(var container)
         {
@@ -3246,7 +3246,7 @@ namespace libui
         public __IntPtr __Instance { get; protected set; }
 
         internal static readonly var NativeToManagedMap =
-            new System.Collections.Concurrent.ConcurrentDictionary<__IntPtr, libui.UiTableValue>() ~ DeleteNativeToManagedMap!(_);
+            new libui.ConcurrentDictionary<__IntPtr, libui.UiTableValue>() ~ DeleteNativeToManagedMap!(_);
 
         private static mixin DeleteNativeToManagedMap(var container)
         {
@@ -3335,7 +3335,7 @@ namespace libui
         public __IntPtr __Instance { get; protected set; }
 
         internal static readonly var NativeToManagedMap =
-            new System.Collections.Concurrent.ConcurrentDictionary<__IntPtr, libui.UiTableModel>() ~ DeleteNativeToManagedMap!(_);
+            new libui.ConcurrentDictionary<__IntPtr, libui.UiTableModel>() ~ DeleteNativeToManagedMap!(_);
 
         private static mixin DeleteNativeToManagedMap(var container)
         {
@@ -3424,7 +3424,7 @@ namespace libui
         public __IntPtr __Instance { get; protected set; }
 
         internal static readonly var NativeToManagedMap =
-            new System.Collections.Concurrent.ConcurrentDictionary<__IntPtr, libui.UiTable>() ~ DeleteNativeToManagedMap!(_);
+            new libui.ConcurrentDictionary<__IntPtr, libui.UiTable>() ~ DeleteNativeToManagedMap!(_);
 
         private static mixin DeleteNativeToManagedMap(var container)
         {
@@ -3531,7 +3531,7 @@ namespace libui
         public __IntPtr __Instance { get; protected set; }
 
         internal static readonly var NativeToManagedMap =
-            new System.Collections.Concurrent.ConcurrentDictionary<__IntPtr, libui.UiControl>() ~ DeleteNativeToManagedMap!(_);
+            new libui.ConcurrentDictionary<__IntPtr, libui.UiControl>() ~ DeleteNativeToManagedMap!(_);
 
         private static mixin DeleteNativeToManagedMap(var container)
         {
@@ -3847,7 +3847,7 @@ namespace libui
         public __IntPtr __Instance { get; protected set; }
 
         internal static readonly var NativeToManagedMap =
-            new System.Collections.Concurrent.ConcurrentDictionary<__IntPtr, libui.UiAreaHandler>() ~ DeleteNativeToManagedMap!(_);
+            new libui.ConcurrentDictionary<__IntPtr, libui.UiAreaHandler>() ~ DeleteNativeToManagedMap!(_);
 
         private static mixin DeleteNativeToManagedMap(var container)
         {
@@ -4042,7 +4042,7 @@ namespace libui
         public __IntPtr __Instance { get; protected set; }
 
         internal static readonly var NativeToManagedMap =
-            new System.Collections.Concurrent.ConcurrentDictionary<__IntPtr, libui.UiAreaDrawParams>() ~ DeleteNativeToManagedMap!(_);
+            new libui.ConcurrentDictionary<__IntPtr, libui.UiAreaDrawParams>() ~ DeleteNativeToManagedMap!(_);
 
         private static mixin DeleteNativeToManagedMap(var container)
         {
@@ -4258,7 +4258,7 @@ namespace libui
         public __IntPtr __Instance { get; protected set; }
 
         internal static readonly var NativeToManagedMap =
-            new System.Collections.Concurrent.ConcurrentDictionary<__IntPtr, libui.UiDrawMatrix>() ~ DeleteNativeToManagedMap!(_);
+            new libui.ConcurrentDictionary<__IntPtr, libui.UiDrawMatrix>() ~ DeleteNativeToManagedMap!(_);
 
         private static mixin DeleteNativeToManagedMap(var container)
         {
@@ -4466,7 +4466,7 @@ namespace libui
         public __IntPtr __Instance { get; protected set; }
 
         internal static readonly var NativeToManagedMap =
-            new System.Collections.Concurrent.ConcurrentDictionary<__IntPtr, libui.UiDrawBrush>() ~ DeleteNativeToManagedMap!(_);
+            new libui.ConcurrentDictionary<__IntPtr, libui.UiDrawBrush>() ~ DeleteNativeToManagedMap!(_);
 
         private static mixin DeleteNativeToManagedMap(var container)
         {
@@ -4746,7 +4746,7 @@ namespace libui
         public __IntPtr __Instance { get; protected set; }
 
         internal static readonly var NativeToManagedMap =
-            new System.Collections.Concurrent.ConcurrentDictionary<__IntPtr, libui.UiDrawBrushGradientStop>() ~ DeleteNativeToManagedMap!(_);
+            new libui.ConcurrentDictionary<__IntPtr, libui.UiDrawBrushGradientStop>() ~ DeleteNativeToManagedMap!(_);
 
         private static mixin DeleteNativeToManagedMap(var container)
         {
@@ -4936,7 +4936,7 @@ namespace libui
         public __IntPtr __Instance { get; protected set; }
 
         internal static readonly var NativeToManagedMap =
-            new System.Collections.Concurrent.ConcurrentDictionary<__IntPtr, libui.UiDrawStrokeParams>() ~ DeleteNativeToManagedMap!(_);
+            new libui.ConcurrentDictionary<__IntPtr, libui.UiDrawStrokeParams>() ~ DeleteNativeToManagedMap!(_);
 
         private static mixin DeleteNativeToManagedMap(var container)
         {
@@ -5150,7 +5150,7 @@ namespace libui
         public __IntPtr __Instance { get; protected set; }
 
         internal static readonly var NativeToManagedMap =
-            new System.Collections.Concurrent.ConcurrentDictionary<__IntPtr, libui.UiFontDescriptor>() ~ DeleteNativeToManagedMap!(_);
+            new libui.ConcurrentDictionary<__IntPtr, libui.UiFontDescriptor>() ~ DeleteNativeToManagedMap!(_);
 
         private static mixin DeleteNativeToManagedMap(var container)
         {
@@ -5337,7 +5337,7 @@ namespace libui
         public __IntPtr __Instance { get; protected set; }
 
         internal static readonly var NativeToManagedMap =
-            new System.Collections.Concurrent.ConcurrentDictionary<__IntPtr, libui.UiDrawTextLayoutParams>() ~ DeleteNativeToManagedMap!(_);
+            new libui.ConcurrentDictionary<__IntPtr, libui.UiDrawTextLayoutParams>() ~ DeleteNativeToManagedMap!(_);
 
         private static mixin DeleteNativeToManagedMap(var container)
         {
@@ -5518,7 +5518,7 @@ namespace libui
         public __IntPtr __Instance { get; protected set; }
 
         internal static readonly var NativeToManagedMap =
-            new System.Collections.Concurrent.ConcurrentDictionary<__IntPtr, libui.UiAreaMouseEvent>() ~ DeleteNativeToManagedMap!(_);
+            new libui.ConcurrentDictionary<__IntPtr, libui.UiAreaMouseEvent>() ~ DeleteNativeToManagedMap!(_);
 
         private static mixin DeleteNativeToManagedMap(var container)
         {
@@ -5758,7 +5758,7 @@ namespace libui
         public __IntPtr __Instance { get; protected set; }
 
         internal static readonly var NativeToManagedMap =
-            new System.Collections.Concurrent.ConcurrentDictionary<__IntPtr, libui.UiAreaKeyEvent>() ~ DeleteNativeToManagedMap!(_);
+            new libui.ConcurrentDictionary<__IntPtr, libui.UiAreaKeyEvent>() ~ DeleteNativeToManagedMap!(_);
 
         private static mixin DeleteNativeToManagedMap(var container)
         {
@@ -5946,7 +5946,7 @@ namespace libui
         public __IntPtr __Instance { get; protected set; }
 
         internal static readonly var NativeToManagedMap =
-            new System.Collections.Concurrent.ConcurrentDictionary<__IntPtr, libui.UiTableModelHandler>() ~ DeleteNativeToManagedMap!(_);
+            new libui.ConcurrentDictionary<__IntPtr, libui.UiTableModelHandler>() ~ DeleteNativeToManagedMap!(_);
 
         private static mixin DeleteNativeToManagedMap(var container)
         {
@@ -6166,7 +6166,7 @@ namespace libui
         public __IntPtr __Instance { get; protected set; }
 
         internal static readonly var NativeToManagedMap =
-            new System.Collections.Concurrent.ConcurrentDictionary<__IntPtr, libui.UiTableTextColumnOptionalParams>() ~ DeleteNativeToManagedMap!(_);
+            new libui.ConcurrentDictionary<__IntPtr, libui.UiTableTextColumnOptionalParams>() ~ DeleteNativeToManagedMap!(_);
 
         private static mixin DeleteNativeToManagedMap(var container)
         {
@@ -6305,7 +6305,7 @@ namespace libui
         public __IntPtr __Instance { get; protected set; }
 
         internal static readonly var NativeToManagedMap =
-            new System.Collections.Concurrent.ConcurrentDictionary<__IntPtr, libui.UiTableParams>() ~ DeleteNativeToManagedMap!(_);
+            new libui.ConcurrentDictionary<__IntPtr, libui.UiTableParams>() ~ DeleteNativeToManagedMap!(_);
 
         private static mixin DeleteNativeToManagedMap(var container)
         {
@@ -6459,7 +6459,7 @@ namespace libui
         public __IntPtr __Instance { get; protected set; }
 
         internal static readonly var NativeToManagedMap =
-            new System.Collections.Concurrent.ConcurrentDictionary<__IntPtr, libui.UiTableSelection>() ~ DeleteNativeToManagedMap!(_);
+            new libui.ConcurrentDictionary<__IntPtr, libui.UiTableSelection>() ~ DeleteNativeToManagedMap!(_);
 
         private static mixin DeleteNativeToManagedMap(var container)
         {

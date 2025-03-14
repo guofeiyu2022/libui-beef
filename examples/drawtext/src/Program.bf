@@ -158,14 +158,14 @@ class Program
 
     static int32 OnClosing(__IntPtr w, __IntPtr data)
     {
-    	ui.UiControlDestroy(Cast<UiControl...>(mainwin));
+    	ui.UiControlDestroy((UiControl)mainwin);
     	ui.UiQuit();
     	return 0;
     }
 
     static int32 ShouldQuit(void *data)
     {
-    	ui.UiControlDestroy(Cast<UiControl...>(mainwin));
+    	ui.UiControlDestroy((UiControl)mainwin);
     	return 1;
     }
 
@@ -199,20 +199,20 @@ class Program
 
     	hbox = ui.UiNewHorizontalBox();
     	ui.UiBoxSetPadded(hbox, 1);
-    	ui.UiWindowSetChild(mainwin, Cast<UiControl...>(hbox));
+    	ui.UiWindowSetChild(mainwin, (UiControl)hbox);
 
     	vbox = ui.UiNewVerticalBox();
     	ui.UiBoxSetPadded(vbox, 1);
-    	ui.UiBoxAppend(hbox, Cast<UiControl...>(vbox), 0);
+    	ui.UiBoxAppend(hbox, (UiControl)vbox, 0);
 
     	fontButton = ui.UiNewFontButton();
     	ui.UiFontButtonOnChanged(fontButton, scope => OnFontChanged, null);
-    	ui.UiBoxAppend(vbox, Cast<UiControl...>(fontButton), 0);
+    	ui.UiBoxAppend(vbox, (UiControl)fontButton, 0);
 
     	form = ui.UiNewForm();
     	ui.UiFormSetPadded(form, 1);
     	// TODO on OS X if this is set to 1 then the window can't resize; does the form not have the concept of stretchy trailing space?
-    	ui.UiBoxAppend(vbox, Cast<UiControl...>(form), 0);
+    	ui.UiBoxAppend(vbox, (UiControl)form, 0);
 
     	alignment = ui.UiNewCombobox();
     	// note that the items match with the values of the uiDrawTextAlign values
@@ -221,25 +221,19 @@ class Program
     	ui.UiComboboxAppend(alignment, "Right");
     	ui.UiComboboxSetSelected(alignment, 0);		// start with left alignment
     	ui.UiComboboxOnSelected(alignment, scope => OnComboboxSelected, null);
-    	ui.UiFormAppend(form, "Alignment", Cast<UiControl...>(alignment), 0);
+    	ui.UiFormAppend(form, "Alignment", (UiControl)alignment, 0);
 
     	systemFont = ui.UiNewCheckbox("");
     	ui.UiCheckboxOnToggled(systemFont, scope => OnCheckboxToggled, null);
-    	ui.UiFormAppend(form, "System Font", Cast<UiControl...>(systemFont), 0);
+    	ui.UiFormAppend(form, "System Font", (UiControl)systemFont, 0);
 
     	area = ui.UiNewArea(handler);
-    	ui.UiBoxAppend(hbox, Cast<UiControl...>(area), 1);
+    	ui.UiBoxAppend(hbox, (UiControl)area, 1);
 
-    	ui.UiControlShow(Cast<UiControl...>(mainwin));
+    	ui.UiControlShow((UiControl)mainwin);
     	ui.UiMain();
     	ui.UiFreeAttributedString(attrstr);
     	ui.UiUninit();
     	return 0;
-    }
-
-    static TTo Cast<TTo, TFrom>(TFrom val)
-    {
-        var val;
-        return *(TTo*)&val;
     }
 }

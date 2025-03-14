@@ -240,14 +240,14 @@ class Program
 
     static int32 OnClosing(__IntPtr w, __IntPtr data)
     {
-    	ui.UiControlDestroy(Cast<UiControl...>(mainwin));
+    	ui.UiControlDestroy((UiControl)mainwin);
     	ui.UiQuit();
     	return 0;
     }
 
     static int32 ShouldQuit(__IntPtr data)
     {
-    	ui.UiControlDestroy(Cast<UiControl...>(mainwin));
+    	ui.UiControlDestroy((UiControl)mainwin);
     	return 1;
     }
 
@@ -280,18 +280,18 @@ class Program
 
         hbox = ui.UiNewHorizontalBox();
         ui.UiBoxSetPadded(hbox, 1);
-        ui.UiWindowSetChild(mainwin, Cast<UiControl...>(hbox));
+        ui.UiWindowSetChild(mainwin, (UiControl)hbox);
 
         vbox = ui.UiNewVerticalBox();
         ui.UiBoxSetPadded(vbox, 1);
-        ui.UiBoxAppend(hbox, Cast<UiControl...>(vbox), 0);
+        ui.UiBoxAppend(hbox, (UiControl)vbox, 0);
 
         //srand(time(NULL));
         for (i = 0; i < 10; i++) {
         	datapoints[i] = ui.UiNewSpinbox(0, 100);
         	ui.UiSpinboxSetValue(datapoints[i], scope Random().NextI32() % 101);
         	ui.UiSpinboxOnChanged(datapoints[i], scope => OnDatapointChanged, null);
-        	ui.UiBoxAppend(vbox, Cast<UiControl...>(datapoints[i]), 0);
+        	ui.UiBoxAppend(vbox, (UiControl)datapoints[i], 0);
         }
 
         colorButton = ui.UiNewColorButton();
@@ -303,20 +303,14 @@ class Program
         	brush.B,
         	brush.A);
         ui.UiColorButtonOnChanged(colorButton, scope => OnColorChanged, null);
-        ui.UiBoxAppend(vbox, Cast<UiControl...>(colorButton), 0);
+        ui.UiBoxAppend(vbox, (UiControl)colorButton, 0);
 
         histogram = ui.UiNewArea(handler);
-        ui.UiBoxAppend(hbox, Cast<UiControl...>(histogram), 1);
+        ui.UiBoxAppend(hbox, (UiControl)histogram, 1);
 
-        ui.UiControlShow(Cast<UiControl...>(mainwin));
+        ui.UiControlShow((UiControl)mainwin);
         ui.UiMain();
         ui.UiUninit();
         return 0;
-    }
-
-    static TTo Cast<TTo, TFrom>(TFrom val)
-    {
-        var val;
-        return *(TTo*)&val;
     }
 }

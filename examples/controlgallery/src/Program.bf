@@ -19,30 +19,30 @@ class Program
 
         var hbox = ui.UiNewHorizontalBox();
         ui.UiBoxSetPadded(hbox, 1);
-        ui.UiBoxAppend(vbox, Cast<UiControl...>(hbox), 0);
+        ui.UiBoxAppend(vbox, (UiControl)hbox, 0);
 
-        ui.UiBoxAppend(hbox, Cast<UiControl...>(ui.UiNewButton("Button")), 0);
-        ui.UiBoxAppend(hbox, Cast<UiControl...>(ui.UiNewCheckbox("Checkbox")), 0);
+        ui.UiBoxAppend(hbox, (UiControl)ui.UiNewButton("Button"), 0);
+        ui.UiBoxAppend(hbox, (UiControl)ui.UiNewCheckbox("Checkbox"), 0);
 
-        ui.UiBoxAppend(vbox, Cast<UiControl...>(ui.UiNewLabel("This is a label.\nLabels can span multiple lines.")), 0);
+        ui.UiBoxAppend(vbox, (UiControl)ui.UiNewLabel("This is a label.\nLabels can span multiple lines."), 0);
 
-        ui.UiBoxAppend(vbox, Cast<UiControl...>(ui.UiNewHorizontalSeparator()), 0);
+        ui.UiBoxAppend(vbox, (UiControl)ui.UiNewHorizontalSeparator(), 0);
 
         var group = ui.UiNewGroup("Entries");
         ui.UiGroupSetMargined(group, 1);
-        ui.UiBoxAppend(vbox, Cast<UiControl...>(group), 1);
+        ui.UiBoxAppend(vbox, (UiControl)group, 1);
 
         var entryForm = ui.UiNewForm();
         ui.UiFormSetPadded(entryForm, 1);
-        ui.UiGroupSetChild(group,  Cast<UiControl...>(entryForm));
+        ui.UiGroupSetChild(group,  (UiControl)entryForm);
 
-        ui.UiFormAppend(entryForm, "Entry", Cast<UiControl...>(ui.UiNewEntry()), 0);
-        ui.UiFormAppend(entryForm, "Password Entry", Cast<UiControl...>(ui.UiNewPasswordEntry()), 0);
-        ui.UiFormAppend(entryForm, "Search Entry", Cast<UiControl...>(ui.UiNewSearchEntry()), 0);
-        ui.UiFormAppend(entryForm, "Multiline Entry", Cast<UiControl...>(ui.UiNewMultilineEntry()), 1);
-        ui.UiFormAppend(entryForm, "Multiline Entry No Wrap", Cast<UiControl...>(ui.UiNewNonWrappingMultilineEntry()), 1);
+        ui.UiFormAppend(entryForm, "Entry", (UiControl)ui.UiNewEntry(), 0);
+        ui.UiFormAppend(entryForm, "Password Entry", (UiControl)ui.UiNewPasswordEntry(), 0);
+        ui.UiFormAppend(entryForm, "Search Entry", (UiControl)ui.UiNewSearchEntry(), 0);
+        ui.UiFormAppend(entryForm, "Multiline Entry", (UiControl)ui.UiNewMultilineEntry(), 1);
+        ui.UiFormAppend(entryForm, "Multiline Entry No Wrap", (UiControl)ui.UiNewNonWrappingMultilineEntry(), 1);
 
-        return Cast<UiControl...>(vbox);
+        return (UiControl)vbox;
     }
 
     static UiControl MakeNumbersPage()
@@ -52,52 +52,52 @@ class Program
 
         var group = ui.UiNewGroup("Numbers");
         ui.UiGroupSetMargined(group, 1);
-        ui.UiBoxAppend(hbox, Cast<UiControl...>(group), 1);
+        ui.UiBoxAppend(hbox, (UiControl)group, 1);
 
         var vbox = ui.UiNewVerticalBox();
         ui.UiBoxSetPadded(vbox, 1);
-        ui.UiGroupSetChild(group,  Cast<UiControl...>(vbox));
+        ui.UiGroupSetChild(group,  (UiControl)vbox);
 
         spinbox = ui.UiNewSpinbox(0, 100);
         slider = ui.UiNewSlider(0, 100);
         pbar = ui.UiNewProgressBar();
         ui.UiSpinboxOnChanged(spinbox, scope => OnSpinboxChanged, null);
         ui.UiSliderOnChanged(slider, scope => OnSliderChanged, null);
-        ui.UiBoxAppend(vbox, Cast<UiControl...>(spinbox), 0);
-        ui.UiBoxAppend(vbox, Cast<UiControl...>(slider), 0);
-        ui.UiBoxAppend(vbox, Cast<UiControl...>(pbar), 0);
+        ui.UiBoxAppend(vbox, (UiControl)spinbox, 0);
+        ui.UiBoxAppend(vbox, (UiControl)slider, 0);
+        ui.UiBoxAppend(vbox, (UiControl)pbar, 0);
 
         var ip = ui.UiNewProgressBar();
         ui.UiProgressBarSetValue(ip, -1);
-        ui.UiBoxAppend(vbox, Cast<UiControl...>(ip), 1);
+        ui.UiBoxAppend(vbox, (UiControl)ip, 1);
 
         group = ui.UiNewGroup("Lists");
         ui.UiGroupSetMargined(group, 1);
-        ui.UiBoxAppend(hbox, Cast<UiControl...>(group), 1);
+        ui.UiBoxAppend(hbox, (UiControl)group, 1);
 
         vbox = ui.UiNewVerticalBox();
         ui.UiBoxSetPadded(vbox, 1);
-        ui.UiGroupSetChild(group,  Cast<UiControl...>(vbox));
+        ui.UiGroupSetChild(group,  (UiControl)vbox);
 
         var cbox = ui.UiNewCombobox();
         ui.UiComboboxAppend(cbox, "Combobox Item 1");
         ui.UiComboboxAppend(cbox, "Combobox Item 2");
         ui.UiComboboxAppend(cbox, "Combobox Item 3");
-        ui.UiBoxAppend(vbox, Cast<UiControl...>(cbox), 0);
+        ui.UiBoxAppend(vbox, (UiControl)cbox, 0);
 
         var ecbox = ui.UiNewEditableCombobox();
         ui.UiEditableComboboxAppend(ecbox, "Editable Item 1");
         ui.UiEditableComboboxAppend(ecbox, "Editable Item 2");
         ui.UiEditableComboboxAppend(ecbox, "Editable Item 3");
-        ui.UiBoxAppend(vbox, Cast<UiControl...>(ecbox), 0);
+        ui.UiBoxAppend(vbox, (UiControl)ecbox, 0);
 
         var rb = ui.UiNewRadioButtons();
         ui.UiRadioButtonsAppend(rb, "Radio Button 1");
         ui.UiRadioButtonsAppend(rb, "Radio Button 2");
         ui.UiRadioButtonsAppend(rb, "Radio Button 3");
-        ui.UiBoxAppend(vbox, Cast<UiControl...>(rb), 1);
+        ui.UiBoxAppend(vbox, (UiControl)rb, 1);
 
-        return Cast<UiControl...>(hbox);
+        return (UiControl)hbox;
     }
 
     static UiControl MakeDataChoosersPage()
@@ -107,33 +107,33 @@ class Program
 
         var vbox = ui.UiNewVerticalBox();
         ui.UiBoxSetPadded(vbox, 1);
-        ui.UiBoxAppend(hbox,  Cast<UiControl...>(vbox), 0);
+        ui.UiBoxAppend(hbox,  (UiControl)vbox, 0);
 
-        ui.UiBoxAppend(vbox, Cast<UiControl...>(ui.UiNewDatePicker()), 0);
-        ui.UiBoxAppend(vbox, Cast<UiControl...>(ui.UiNewTimePicker()), 0);
-        ui.UiBoxAppend(vbox, Cast<UiControl...>(ui.UiNewDateTimePicker()), 0);
+        ui.UiBoxAppend(vbox, (UiControl)ui.UiNewDatePicker(), 0);
+        ui.UiBoxAppend(vbox, (UiControl)ui.UiNewTimePicker(), 0);
+        ui.UiBoxAppend(vbox, (UiControl)ui.UiNewDateTimePicker(), 0);
 
-        ui.UiBoxAppend(vbox, Cast<UiControl...>(ui.UiNewFontButton()), 0);
-        ui.UiBoxAppend(vbox, Cast<UiControl...>(ui.UiNewColorButton()), 0);
+        ui.UiBoxAppend(vbox, (UiControl)ui.UiNewFontButton(), 0);
+        ui.UiBoxAppend(vbox, (UiControl)ui.UiNewColorButton(), 0);
 
-        ui.UiBoxAppend(hbox, Cast<UiControl...>(ui.UiNewVerticalSeparator()), 0);
+        ui.UiBoxAppend(hbox, (UiControl)ui.UiNewVerticalSeparator(), 0);
 
         vbox = ui.UiNewVerticalBox();
         ui.UiBoxSetPadded(vbox, 1);
-        ui.UiBoxAppend(hbox,  Cast<UiControl...>(vbox), 1);
+        ui.UiBoxAppend(hbox,  (UiControl)vbox, 1);
 
         var grid = ui.UiNewGrid();
         ui.UiGridSetPadded(grid, 1);
-        ui.UiBoxAppend(vbox,  Cast<UiControl...>(grid), 0);
+        ui.UiBoxAppend(vbox,  (UiControl)grid, 0);
 
         var button = ui.UiNewButton("  Open File  ");
         entry1 = ui.UiNewEntry();
         ui.UiEntrySetReadOnly(entry1, 1);
         ui.UiButtonOnClicked(button, scope => OnOpenFileClicked, entry1.__Instance);
-        ui.UiGridAppend(grid, Cast<UiControl...>(button),
+        ui.UiGridAppend(grid, (UiControl)button,
         	0, 0, 1, 1,
         	0, (uint32)UiAlign.UiAlignFill, 0, (uint32)UiAlign.UiAlignFill);
-        ui.UiGridAppend(grid, Cast<UiControl...>(entry1),
+        ui.UiGridAppend(grid, (UiControl)entry1,
         	1, 0, 1, 1,
         	1, (uint32)UiAlign.UiAlignFill, 0, (uint32)UiAlign.UiAlignFill);
 
@@ -141,10 +141,10 @@ class Program
         entry2 = ui.UiNewEntry();
         ui.UiEntrySetReadOnly(entry2, 1);
         ui.UiButtonOnClicked(button, scope => OnOpenFolderClicked, entry2.__Instance);
-        ui.UiGridAppend(grid, Cast<UiControl...>(button),
+        ui.UiGridAppend(grid, (UiControl)button,
         	0, 1, 1, 1,
         	0, (uint32)UiAlign.UiAlignFill, 0, (uint32)UiAlign.UiAlignFill);
-        ui.UiGridAppend(grid, Cast<UiControl...>(entry2),
+        ui.UiGridAppend(grid, (UiControl)entry2,
         	1, 1, 1, 1,
         	1, (uint32)UiAlign.UiAlignFill, 0, (uint32)UiAlign.UiAlignFill);
 
@@ -152,31 +152,31 @@ class Program
         entry3 = ui.UiNewEntry();
         ui.UiEntrySetReadOnly(entry3, 1);
         ui.UiButtonOnClicked(button, scope => OnSaveFileClicked, entry3.__Instance);
-        ui.UiGridAppend(grid, Cast<UiControl...>(button),
+        ui.UiGridAppend(grid, (UiControl)button,
         	0, 2, 1, 1,
         	0, (uint32)UiAlign.UiAlignFill, 0, (uint32)UiAlign.UiAlignFill);
-        ui.UiGridAppend(grid, Cast<UiControl...>(entry3),
+        ui.UiGridAppend(grid, (UiControl)entry3,
         	1, 2, 1, 1,
         	1, (uint32)UiAlign.UiAlignFill, 0, (uint32)UiAlign.UiAlignFill);
 
         var msggrid = ui.UiNewGrid();
         ui.UiGridSetPadded(msggrid, 1);
-        ui.UiGridAppend(grid, Cast<UiControl...>(msggrid),
+        ui.UiGridAppend(grid, (UiControl)msggrid,
         	0, 3, 2, 1,
         	0, (uint32)UiAlign.UiAlignCenter, 0, (uint32)UiAlign.UiAlignStart);
 
         button =  ui.UiNewButton("Message Box");
         ui.UiButtonOnClicked(button, scope => OnMsgBoxClicked, null);
-        ui.UiGridAppend(msggrid, Cast<UiControl...>(button),
+        ui.UiGridAppend(msggrid, (UiControl)button,
         	0, 0, 1, 1,
         	0, (uint32)UiAlign.UiAlignFill, 0, (uint32)UiAlign.UiAlignFill);
         button = ui.UiNewButton("Error Box");
         ui.UiButtonOnClicked(button, scope => OnMsgBoxErrorClicked, null);
-        ui.UiGridAppend(msggrid, Cast<UiControl...>(button),
+        ui.UiGridAppend(msggrid, (UiControl)button,
         	1, 0, 1, 1,
         	0, (uint32)UiAlign.UiAlignFill, 0, (uint32)UiAlign.UiAlignFill);
 
-        return Cast<UiControl...>(hbox);
+        return (UiControl)hbox;
     }
 
     static int Main()
@@ -214,7 +214,7 @@ class Program
         ui.UiOnShouldQuit(scope => ShouldQuit, mainWin.__Instance);
 
         var tab = ui.UiNewTab();
-        ui.UiWindowSetChild(mainWin, Cast<UiControl...>(tab));
+        ui.UiWindowSetChild(mainWin, (UiControl)tab);
         ui.UiWindowSetMargined(mainWin, 1);
 
         ui.UiTabAppend(tab, "Basic Controls", MakeBasicControlsPage());
@@ -226,7 +226,7 @@ class Program
     	ui.UiTabAppend(tab, "Data Choosers", MakeDataChoosersPage());
     	ui.UiTabSetMargined(tab, 2, 1);
 
-        ui.UiControlShow(Cast<UiControl...>(mainWin));
+        ui.UiControlShow((UiControl)mainWin);
         ui.UiMain();
         ui.UiUninit();
         return 0;
@@ -276,7 +276,7 @@ class Program
     static int32 ShouldQuit(__IntPtr data)
     {
     	var win = UiWindow.FromInternalPtr(data);
-        ui.UiControlDestroy(Cast<UiControl...>(win));
+        ui.UiControlDestroy((UiControl)win);
         return 1;
     }
 
@@ -344,15 +344,6 @@ class Program
     	ui.UiMsgBoxError(mainWin,
     		"This message box describes an error.",
     		"More detailed information can be shown here.");
-    }
-    #endregion
-
-
-    #region helper funcs
-    static TTo Cast<TTo, TFrom>(TFrom val)
-    {
-        var val;
-        return *(TTo*)&val;
     }
     #endregion
 }

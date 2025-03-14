@@ -11,12 +11,6 @@ class Program
     	return 1;
     }
 
-    static TTo Cast<TTo, TFrom>(TFrom val)
-    {
-        var val;
-        return *(TTo*)&val;
-    }
-
     static int Main()
     {
         var o = scope UiInitOptions();
@@ -32,9 +26,9 @@ class Program
         ui.UiWindowOnClosing(w, scope => OnClosing, null);
 
         var l = ui.UiNewLabel("Hello, World!");
-        ui.UiWindowSetChild(w, Cast<UiControl...>(l));
+        ui.UiWindowSetChild(w, (UiControl)l);
 
-        ui.UiControlShow(Cast<UiControl...>(w));
+        ui.UiControlShow((UiControl)w);
         ui.UiMain();
         ui.UiUninit();
         return 0;
