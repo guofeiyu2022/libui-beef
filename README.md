@@ -57,3 +57,12 @@ class Program
     }
 }
 ```
+
+## Tips
+- libui-beef supports importing from remote, follow below steps:
+  1. In IDE, right clicks "Workspace" node, selects "Add From Remote...".
+    ![from_remote1](images/from_remote1.png)
+  2. In opened dialog, inputs project URL for libui-beef.
+    ![from_remote2](images/from_remote2.png)
+  3. You can refresh newest libui-beef by right clicking "libui-beef" node, then selecting "Update Version Lock".
+    ![update_lock](images/update_lock.png)
