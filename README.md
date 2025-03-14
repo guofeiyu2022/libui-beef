@@ -3,21 +3,17 @@ A Beef language binding for [libui-ng](https://github.com/libui-ng/libui-ng)
 
 ## Screenshots
 
-From examples/controlgallery:
+| From examples/controlgallery |
+|-------|
+| <img src="examples/controlgallery/screenshots/cg1.png" alt="base controls" width="33%" /><img src="examples/controlgallery/screenshots/cg2.png" alt="numbers and lists" width="33%" /><img src="examples/controlgallery/screenshots/cg3.png" alt="data choosers" width="33%" /> |
 
-![base controls](examples/controlgallery/screenshots/cg1.png)
+| From examples/drawtext | From examples/histogram |
+|--------|------|
+| <img src="examples/drawtext/screenshots/dt1.png" alt="draw text" width="50%" /> | <img src="examples/histogram/screenshots/h1.png" alt="histogram" width="50%" /> |
 
-![numbers and lists](examples/controlgallery/screenshots/cg2.png)
 
-![data choosers](examples/controlgallery/screenshots/cg3.png)
 
-From examples/drawtext:
 
-![draw text](examples/drawtext/screenshots/dt1.png)
-
-From examples/histogram:
-
-![draw text](examples/histogram/screenshots/h1.png)
 
 ## Simple Example
 Below example displays a blank window.
