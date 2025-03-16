@@ -68,3 +68,8 @@ class Program
   3. You can refresh newest libui-beef by right clicking "libui-beef" node, then selecting "Update Version Lock".
 
   <img src="images/update_lock.png" alt="update version lock" width="50%" />
+
+## Links
+ - [libui](https://github.com/andlabs/libui)
+ - [libui-ng](https://github.com/libui-ng/libui-ng)
+ - [Beef Lang](https://www.beeflang.org/)
