@@ -16,10 +16,8 @@ class Program
 
     static void AppendWithAttribute(String what, UiAttribute attr, UiAttribute attr2)
     {
-    	uint64 start, end;
-
-    	start = ui.UiAttributedStringLen(attrstr);
-    	end = start + (uint64)what.Length;
+    	var start = ui.UiAttributedStringLen(attrstr);
+    	var end = start + (uint32)what.Length;
     	ui.UiAttributedStringAppendUnattributed(attrstr, what);
     	ui.UiAttributedStringSetAttribute(attrstr, attr, start, end);
     	if (attr2 != null)

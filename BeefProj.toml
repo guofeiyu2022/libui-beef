@@ -7,9 +7,17 @@ StartupObject = "Program"
 DefaultNamespace = "libui-beef"
 
 [Configs.Debug.Win64]
-LibPaths = ["$(ProjectDir)/dist/libui.lib"]
-PostBuildCmds = ["CopyToDependents(\"$(ProjectDir)/dist/*.dll\")"]
+LibPaths = ["$(ProjectDir)/dist/Win64/libui.lib"]
+PostBuildCmds = ["CopyToDependents(\"$(ProjectDir)/dist/Win64/*.dll\")"]
+
+[Configs.Debug.Win32]
+LibPaths = ["$(ProjectDir)/dist/Win32/libui.lib"]
+PostBuildCmds = ["CopyToDependents(\"$(ProjectDir)/dist/Win32/*.dll\")"]
 
 [Configs.Release.Win64]
-LibPaths = ["$(ProjectDir)/dist/libui.lib"]
-PostBuildCmds = ["CopyToDependents(\"$(ProjectDir)/dist/*.dll\")"]
+LibPaths = ["$(ProjectDir)/dist/Win64/libui.lib"]
+PostBuildCmds = ["CopyToDependents(\"$(ProjectDir)/dist/Win64/*.dll\")"]
+
+[Configs.Release.Win32]
+LibPaths = ["$(ProjectDir)/dist/Win32/libui.lib"]
+PostBuildCmds = ["CopyToDependents(\"$(ProjectDir)/dist/Win32/*.dll\")"]
