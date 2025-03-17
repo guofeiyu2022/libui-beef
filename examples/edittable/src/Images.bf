@@ -37,7 +37,6 @@ class Images
     {
         get
         {
-
             return _files;
         }
     }
@@ -46,12 +45,12 @@ class Images
     {
     	for (var imgFile in _files)
         {
-    		if (name == imgFile.name)
+            if (name == imgFile.name)
             {
-    			ui.UiImageAppend(img, (void *)imgFile.data, imgFile.width, imgFile.height, imgFile.stride);
-    			return;
-    		}
-    	}
+                ui.UiImageAppend(img, (void *)imgFile.data, imgFile.width, imgFile.height, imgFile.stride);
+                return;
+            }
+        }
     }
 
     #region data

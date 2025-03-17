@@ -133,31 +133,23 @@ class Program
     			data.rows[row].checkbox = ui.UiTableValueInt(val);
     			return;
     		case MCOL.MCOL_PART_EDITABLE:
-                var str = StringView(ui.UiTableValueString(val));
-    			//if (str.Length >= PART_EDITABLE_SIZE)
-    			//	return;
                 delete data.rows[row].partEditable;
-    			data.rows[row].partEditable = new String(str);
+    			data.rows[row].partEditable = new String(ui.UiTableValueString(val));
     			return;
     		case MCOL.MCOL_BUTTON_TEXT:
     			data.rows[row].bgColor = yellow;
     			ui.UiTableModelRowChanged(m, row);
     			return;
     		default:
-    			//assert(0)
     	}
     }
 
-    static void populateRow(int row, String text)
+    static void PopulateRow(int row, String text)
     {
     	var purple = Data.Rgba(0.5, 0, 0.75, 1);
     	var transparent = Data.Rgba(0, 0, 0, 0);
 
-    	//data.rows[row].rowxx = malloc(ROWXX_SIZE * sizeof(*data.rows[row].rowxx));
-    	//assert(data.rows[row].rowxx != NULL);
     	data.rows[row].rowxx = text;
-    	//data.rows[row].partEditable = malloc(PART_EDITABLE_SIZE * sizeof(*data.rows[row].partEditable));
-    	//assert(data.rows[row].partEditable != NULL);
     	data.rows[row].partEditable = new String("Editable");
     	data.rows[row].bgColor = transparent;
     	data.rows[row].textColor = (row%2 ==1) ? purple : transparent;
@@ -166,18 +158,17 @@ class Program
     	data.rows[row].progress = scope Random().NextI32() % 101;
     }
 
-    static void populateData()
+    static void PopulateData()
     {
     	var numRows = 10;
     	for (int row = 0; row < numRows; ++row) {
             var item = new Data.Row();
             data.rows.Add(item);
-    		//sprintf(text, "Row %d", row);
-    		populateRow(row, new $"Row {row}");
+    		PopulateRow(row, new $"Row {row}");
     	}
     }
 
-    static void insertRow(__IntPtr b, __IntPtr _data)
+    static void InsertRow(__IntPtr b, __IntPtr _data)
     {
     	var text = ui.UiEntryText(input);
 
@@ -189,21 +180,16 @@ class Program
     	if (index < 0 || index > data.numRows)
     		return;
 
-    	//data.rows = realloc(data.rows, (data.numRows+1) * sizeof(*data.rows));
-    	//assert(data.rows != NULL);
-
-    	//memmove(&data.rows[index+1], &data.rows[index], (data.numRows - index) * sizeof(*data.rows));
-
         data.rows.Insert(index, new Data.Row());
 
     	text = ui.UiEntryText(col1Text);
-    	populateRow(index, new String(text));
+    	PopulateRow(index, new String(text));
     	ui.UiFreeText(text);
 
     	ui.UiTableModelRowInserted(m, index);
     }
 
-    static void deleteRow(__IntPtr b, __IntPtr _data)
+    static void DeleteRow(__IntPtr b, __IntPtr _data)
     {
     	var text = ui.UiEntryText(input);
         int32 index;
@@ -217,25 +203,12 @@ class Program
         var row =  data.rows[index];
         data.rows.RemoveAt(index);
         delete row;
-        
 
-    	//free(data.rows[index].rowxx);
-    	//free(data.rows[index].partEditable);
-
-    	//memmove(&data.rows[index], &data.rows[index+1], (data.numRows - index - 1) * sizeof(*data.rows));
-    	//--data.numRows;
     	ui.UiTableModelRowDeleted(m, index);
-
-    	//data.rows = realloc(data.rows, (Data.numRows) * sizeof(*data.rows));
-    	//if (data.numRows != 0)
-    	//	assert(data.rows != NULL);
     }
 
-    static UiBox makePage()
+    static UiBox MakePage()
     {
-    	//uiButton *insert, *delete;
-    	//uiTable *t;
-    	//uiTable *t2;
     	UiTableParams p = scope UiTableParams();
     	UiTableTextColumnOptionalParams tp = scope UiTableTextColumnOptionalParams();
 
@@ -257,13 +230,13 @@ class Program
     	ui.UiEntrySetText(col1Text, "Column 1 Text");
     	ui.UiBoxAppend(controls, (UiControl)col1Text, 0);
     	var insert = ui.UiNewButton("Insert");
-    	ui.UiButtonOnClicked(insert, scope => insertRow, null);
+    	ui.UiButtonOnClicked(insert, scope => InsertRow, null);
     	ui.UiBoxAppend(controls, (UiControl)insert, 0);
     	var @delete = ui.UiNewButton("Delete");
-    	ui.UiButtonOnClicked(@delete, scope => deleteRow, null);
+    	ui.UiButtonOnClicked(@delete, scope => DeleteRow, null);
     	ui.UiBoxAppend(controls, (UiControl)@delete, 0);
 
-    	populateData();
+    	PopulateData();
 
     	m = ui.UiNewTableModel(mh);
 
@@ -336,7 +309,7 @@ class Program
         var mainBox = ui.UiNewHorizontalBox();
         ui.UiWindowSetChild(w, (UiControl)mainBox);
 
-        var page = makePage();
+        var page = MakePage();
         ui.UiBoxAppend(mainBox, (UiControl)page, 1);
 
         ui.UiControlShow((UiControl)w);

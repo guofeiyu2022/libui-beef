@@ -5,11 +5,11 @@ A Beef language binding for [libui-ng](https://github.com/libui-ng/libui-ng)
 
 | From examples/controlgallery |
 |-------|
-| <img src="examples/controlgallery/screenshots/cg1.png" alt="base controls" width="33%" /><img src="examples/controlgallery/screenshots/cg2.png" alt="numbers and lists" width="33%" /><img src="examples/controlgallery/screenshots/cg3.png" alt="data choosers" width="33%" /> |
+| <img src="examples/controlgallery/screenshots/cg1.png" alt="base controls" width="33%" /> <img src="examples/controlgallery/screenshots/cg2.png" alt="numbers and lists" width="33%" /> <img src="examples/controlgallery/screenshots/cg3.png" alt="data choosers" width="33%" /> |
 
 | From examples/drawtext | From examples/histogram | From examples/edittable |
 |-------|------|------|
-| <img src="examples/drawtext/screenshots/dt1.png" alt="draw text" width="33%" /> | <img src="examples/histogram/screenshots/h1.png" alt="histogram" width="33%" /> | <img src="examples/edittable/screenshots/et1.png" alt="editable table" width="33%" /> |
+| <img src="examples/drawtext/screenshots/dt1.png" alt="draw text" width="90%" /> | <img src="examples/histogram/screenshots/h1.png" alt="histogram" width="90%" /> | <img src="examples/edittable/screenshots/et1.png" alt="editable table" width="90%" /> |
 
 
 
