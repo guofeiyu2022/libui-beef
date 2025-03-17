@@ -119,7 +119,7 @@ class Program
     	sp.Cap = (uint32)UiDrawLineCap.UiDrawLineCapFlat;
     	sp.Join = (uint32)UiDrawLineJoin.UiDrawLineJoinMiter;
     	sp.Thickness = 2;
-    	sp.MiterLimit = 10.0; //(uint32)UiDrawDefaultMiterLimit;
+    	sp.MiterLimit = ui.UiDrawDefaultMiterLimit;
 
     	// draw the axes
     	SetSolidBrush(brush, colorBlack, 1.0);
