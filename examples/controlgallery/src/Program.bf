@@ -69,7 +69,7 @@ class Program
 
         var ip = ui.UiNewProgressBar();
         ui.UiProgressBarSetValue(ip, -1);
-        ui.UiBoxAppend(vbox, (UiControl)ip, 1);
+        ui.UiBoxAppend(vbox, (UiControl)ip, 0);
 
         group = ui.UiNewGroup("Lists");
         ui.UiGroupSetMargined(group, 1);
