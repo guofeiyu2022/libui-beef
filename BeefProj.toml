@@ -14,6 +14,10 @@ PostBuildCmds = ["CopyToDependents(\"$(ProjectDir)/dist/Win64/*.dll\")"]
 LibPaths = ["$(ProjectDir)/dist/Win32/libui.lib"]
 PostBuildCmds = ["CopyToDependents(\"$(ProjectDir)/dist/Win32/*.dll\")"]
 
+[Configs.Debug.Linux64]
+LibPaths = ["$(ProjectDir)/dist/Linux64/libui.so"]
+PostBuildCmds = ["CopyToDependents(\"$(ProjectDir)/dist/Linux64/*.so\")"]
+
 [Configs.Release.Win64]
 LibPaths = ["$(ProjectDir)/dist/Win64/libui.lib"]
 PostBuildCmds = ["CopyToDependents(\"$(ProjectDir)/dist/Win64/*.dll\")"]
@@ -21,3 +25,7 @@ PostBuildCmds = ["CopyToDependents(\"$(ProjectDir)/dist/Win64/*.dll\")"]
 [Configs.Release.Win32]
 LibPaths = ["$(ProjectDir)/dist/Win32/libui.lib"]
 PostBuildCmds = ["CopyToDependents(\"$(ProjectDir)/dist/Win32/*.dll\")"]
+
+[Configs.Release.Linux64]
+LibPaths = ["$(ProjectDir)/dist/Linux64/libui.so"]
+PostBuildCmds = ["CopyToDependents(\"$(ProjectDir)/dist/Linux64/*.so\")"]
