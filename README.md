@@ -64,6 +64,11 @@ class Program
 }
 ```
 
+## Supported Platforms
+- Windows x86
+- Windows x64
+- Linux x64 (GNOME)
+
 ## Tips
 - libui-beef supports importing from remote, follow below steps:
 
