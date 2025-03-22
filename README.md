@@ -1,30 +1,6 @@
 # libui-Beef
 A Beef language binding for [libui-ng](https://github.com/libui-ng/libui-ng)
 
-## Screenshots
-
-- Windows
-
-| From examples/controlgallery |
-|-------|
-| <img src="examples/controlgallery/screenshots/cg1.png" alt="base controls" width="33%" /><img src="examples/controlgallery/screenshots/cg2.png" alt="numbers and lists" width="33%" /><img src="examples/controlgallery/screenshots/cg3.png" alt="data choosers" width="33%" /> |
-
-| From examples/drawtext | From examples/histogram | From examples/edittable |
-|-------|------|------|
-| <img src="examples/drawtext/screenshots/dt1.png" alt="draw text" width="90%" /> | <img src="examples/histogram/screenshots/h1.png" alt="histogram" width="90%" /> | <img src="examples/edittable/screenshots/et1.png" alt="editable table" width="90%" /> |
-
-- Ubuntu Linux
-
-| From examples/controlgallery |
-|-------|
-| <img src="examples/controlgallery/screenshots/cg1_l.png" alt="base controls" width="33%" /><img src="examples/controlgallery/screenshots/cg2_l.png" alt="numbers and lists" width="33%" /><img src="examples/controlgallery/screenshots/cg3_l.png" alt="data choosers" width="33%" /> |
-
-| From examples/drawtext | From examples/histogram | From examples/edittable |
-|-------|------|------|
-| <img src="examples/drawtext/screenshots/dt1_l.png" alt="draw text" width="90%" /> | <img src="examples/histogram/screenshots/h1_l.png" alt="histogram" width="90%" /> | <img src="examples/edittable/screenshots/et1_l.png" alt="editable table" width="90%" /> |
-
-
-
 ## Simple Example
 Below example displays a blank window.
 
@@ -68,6 +44,54 @@ class Program
 - Windows x86
 - Windows x64
 - Linux x64 (GNOME)
+
+## Screenshots
+
+- Windows
+
+<table style="table-layout:fixed">
+  <tr>
+    <td colspan="3">controlgallery</td>
+  </tr>
+  <tr>
+    <td width="33.33%"><img src="examples/controlgallery/screenshots/cg1.png" alt="base controls" /></td>
+    <td width="33.33%"><img src="examples/controlgallery/screenshots/cg2.png" alt="numbers and lists" /></td>
+    <td width="33.33%"><img src="examples/controlgallery/screenshots/cg3.png" alt="data choosers" /></td>
+  </tr>
+  <tr>
+    <td>drawtext</td>
+    <td>histogram</td>
+    <td>edittable</td>
+  </tr>
+  <tr>
+    <td><img src="examples/drawtext/screenshots/dt1.png" alt="draw text" /></td>
+    <td><img src="examples/histogram/screenshots/h1.png" alt="histogram" /></td>
+    <td><img src="examples/edittable/screenshots/et1.png" alt="editable table" /></td>
+  </tr>
+</table>
+
+- Ubuntu Linux
+
+<table style="table-layout:fixed">
+  <tr>
+    <td colspan="3">controlgallery</td>
+  </tr>
+  <tr>
+    <td width="33.33%"><img src="examples/controlgallery/screenshots/cg1_l.png" alt="base controls" /></td>
+    <td width="33.33%"><img src="examples/controlgallery/screenshots/cg2_l.png" alt="numbers and lists" /></td>
+    <td width="33.33%"><img src="examples/controlgallery/screenshots/cg3_l.png" alt="data choosers" /></td>
+  </tr>
+  <tr>
+    <td>drawtext</td>
+    <td>histogram</td>
+    <td>edittable</td>
+  </tr>
+  <tr>
+    <td><img src="examples/drawtext/screenshots/dt1_l.png" alt="draw text" /></td>
+    <td><img src="examples/histogram/screenshots/h1_l.png" alt="histogram" /></td>
+    <td><img src="examples/edittable/screenshots/et1_l.png" alt="editable table" /></td>
+  </tr>
+</table>
 
 ## Tips
 - libui-beef supports importing from remote, follow below steps:
