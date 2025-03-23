@@ -325,6 +325,13 @@ namespace libui
             return __GetOrCreateInstance(native, true);
         }
 
+        public static void Delete(UiInitOptions o)
+        {
+            if (o == null) return;
+            NativeToManagedMap.TryRemove(o.__Instance, var _);
+            delete o;
+        }
+
         internal static UiInitOptions __CreateInstance(__Internal native, bool skipVTables = false)
         {
             return new UiInitOptions(native, skipVTables);
@@ -452,6 +459,13 @@ namespace libui
             return __GetOrCreateInstance(native, true);
         }
 
+        public static void Delete(UiWindow o)
+        {
+            if (o == null) return;
+            NativeToManagedMap.TryRemove(o.__Instance, var _);
+            delete o;
+        }
+
         internal static UiWindow __CreateInstance(__Internal native, bool skipVTables = false)
         {
             return new UiWindow(native, skipVTables);
@@ -539,6 +553,13 @@ namespace libui
         public static UiButton FromInternalPtr(__IntPtr native)
         {
             return __GetOrCreateInstance(native, true);
+        }
+
+        public static void Delete(UiButton o)
+        {
+            if (o == null) return;
+            NativeToManagedMap.TryRemove(o.__Instance, var _);
+            delete o;
         }
 
         internal static UiButton __CreateInstance(__Internal native, bool skipVTables = false)
@@ -630,6 +651,13 @@ namespace libui
             return __GetOrCreateInstance(native, true);
         }
 
+        public static void Delete(UiBox o)
+        {
+            if (o == null) return;
+            NativeToManagedMap.TryRemove(o.__Instance, var _);
+            delete o;
+        }
+
         internal static UiBox __CreateInstance(__Internal native, bool skipVTables = false)
         {
             return new UiBox(native, skipVTables);
@@ -717,6 +745,13 @@ namespace libui
         public static UiCheckbox FromInternalPtr(__IntPtr native)
         {
             return __GetOrCreateInstance(native, true);
+        }
+
+        public static void Delete(UiCheckbox o)
+        {
+            if (o == null) return;
+            NativeToManagedMap.TryRemove(o.__Instance, var _);
+            delete o;
         }
 
         internal static UiCheckbox __CreateInstance(__Internal native, bool skipVTables = false)
@@ -808,6 +843,13 @@ namespace libui
             return __GetOrCreateInstance(native, true);
         }
 
+        public static void Delete(UiEntry o)
+        {
+            if (o == null) return;
+            NativeToManagedMap.TryRemove(o.__Instance, var _);
+            delete o;
+        }
+
         internal static UiEntry __CreateInstance(__Internal native, bool skipVTables = false)
         {
             return new UiEntry(native, skipVTables);
@@ -895,6 +937,13 @@ namespace libui
         public static UiLabel FromInternalPtr(__IntPtr native)
         {
             return __GetOrCreateInstance(native, true);
+        }
+
+        public static void Delete(UiLabel o)
+        {
+            if (o == null) return;
+            NativeToManagedMap.TryRemove(o.__Instance, var _);
+            delete o;
         }
 
         internal static UiLabel __CreateInstance(__Internal native, bool skipVTables = false)
@@ -986,6 +1035,13 @@ namespace libui
             return __GetOrCreateInstance(native, true);
         }
 
+        public static void Delete(UiTab o)
+        {
+            if (o == null) return;
+            NativeToManagedMap.TryRemove(o.__Instance, var _);
+            delete o;
+        }
+
         internal static UiTab __CreateInstance(__Internal native, bool skipVTables = false)
         {
             return new UiTab(native, skipVTables);
@@ -1073,6 +1129,13 @@ namespace libui
         public static UiGroup FromInternalPtr(__IntPtr native)
         {
             return __GetOrCreateInstance(native, true);
+        }
+
+        public static void Delete(UiGroup o)
+        {
+            if (o == null) return;
+            NativeToManagedMap.TryRemove(o.__Instance, var _);
+            delete o;
         }
 
         internal static UiGroup __CreateInstance(__Internal native, bool skipVTables = false)
@@ -1164,6 +1227,13 @@ namespace libui
             return __GetOrCreateInstance(native, true);
         }
 
+        public static void Delete(UiSpinbox o)
+        {
+            if (o == null) return;
+            NativeToManagedMap.TryRemove(o.__Instance, var _);
+            delete o;
+        }
+
         internal static UiSpinbox __CreateInstance(__Internal native, bool skipVTables = false)
         {
             return new UiSpinbox(native, skipVTables);
@@ -1251,6 +1321,13 @@ namespace libui
         public static UiSlider FromInternalPtr(__IntPtr native)
         {
             return __GetOrCreateInstance(native, true);
+        }
+
+        public static void Delete(UiSlider o)
+        {
+            if (o == null) return;
+            NativeToManagedMap.TryRemove(o.__Instance, var _);
+            delete o;
         }
 
         internal static UiSlider __CreateInstance(__Internal native, bool skipVTables = false)
@@ -1342,6 +1419,13 @@ namespace libui
             return __GetOrCreateInstance(native, true);
         }
 
+        public static void Delete(UiProgressBar o)
+        {
+            if (o == null) return;
+            NativeToManagedMap.TryRemove(o.__Instance, var _);
+            delete o;
+        }
+
         internal static UiProgressBar __CreateInstance(__Internal native, bool skipVTables = false)
         {
             return new UiProgressBar(native, skipVTables);
@@ -1429,6 +1513,13 @@ namespace libui
         public static UiSeparator FromInternalPtr(__IntPtr native)
         {
             return __GetOrCreateInstance(native, true);
+        }
+
+        public static void Delete(UiSeparator o)
+        {
+            if (o == null) return;
+            NativeToManagedMap.TryRemove(o.__Instance, var _);
+            delete o;
         }
 
         internal static UiSeparator __CreateInstance(__Internal native, bool skipVTables = false)
@@ -1520,6 +1611,13 @@ namespace libui
             return __GetOrCreateInstance(native, true);
         }
 
+        public static void Delete(UiCombobox o)
+        {
+            if (o == null) return;
+            NativeToManagedMap.TryRemove(o.__Instance, var _);
+            delete o;
+        }
+
         internal static UiCombobox __CreateInstance(__Internal native, bool skipVTables = false)
         {
             return new UiCombobox(native, skipVTables);
@@ -1607,6 +1705,13 @@ namespace libui
         public static UiEditableCombobox FromInternalPtr(__IntPtr native)
         {
             return __GetOrCreateInstance(native, true);
+        }
+
+        public static void Delete(UiEditableCombobox o)
+        {
+            if (o == null) return;
+            NativeToManagedMap.TryRemove(o.__Instance, var _);
+            delete o;
         }
 
         internal static UiEditableCombobox __CreateInstance(__Internal native, bool skipVTables = false)
@@ -1698,6 +1803,13 @@ namespace libui
             return __GetOrCreateInstance(native, true);
         }
 
+        public static void Delete(UiRadioButtons o)
+        {
+            if (o == null) return;
+            NativeToManagedMap.TryRemove(o.__Instance, var _);
+            delete o;
+        }
+
         internal static UiRadioButtons __CreateInstance(__Internal native, bool skipVTables = false)
         {
             return new UiRadioButtons(native, skipVTables);
@@ -1785,6 +1897,13 @@ namespace libui
         public static Tm FromInternalPtr(__IntPtr native)
         {
             return __GetOrCreateInstance(native, true);
+        }
+
+        public static void Delete(Tm o)
+        {
+            if (o == null) return;
+            NativeToManagedMap.TryRemove(o.__Instance, var _);
+            delete o;
         }
 
         internal static Tm __CreateInstance(__Internal native, bool skipVTables = false)
@@ -1876,6 +1995,13 @@ namespace libui
             return __GetOrCreateInstance(native, true);
         }
 
+        public static void Delete(UiDateTimePicker o)
+        {
+            if (o == null) return;
+            NativeToManagedMap.TryRemove(o.__Instance, var _);
+            delete o;
+        }
+
         internal static UiDateTimePicker __CreateInstance(__Internal native, bool skipVTables = false)
         {
             return new UiDateTimePicker(native, skipVTables);
@@ -1963,6 +2089,13 @@ namespace libui
         public static UiMultilineEntry FromInternalPtr(__IntPtr native)
         {
             return __GetOrCreateInstance(native, true);
+        }
+
+        public static void Delete(UiMultilineEntry o)
+        {
+            if (o == null) return;
+            NativeToManagedMap.TryRemove(o.__Instance, var _);
+            delete o;
         }
 
         internal static UiMultilineEntry __CreateInstance(__Internal native, bool skipVTables = false)
@@ -2054,6 +2187,13 @@ namespace libui
             return __GetOrCreateInstance(native, true);
         }
 
+        public static void Delete(UiMenuItem o)
+        {
+            if (o == null) return;
+            NativeToManagedMap.TryRemove(o.__Instance, var _);
+            delete o;
+        }
+
         internal static UiMenuItem __CreateInstance(__Internal native, bool skipVTables = false)
         {
             return new UiMenuItem(native, skipVTables);
@@ -2141,6 +2281,13 @@ namespace libui
         public static UiMenu FromInternalPtr(__IntPtr native)
         {
             return __GetOrCreateInstance(native, true);
+        }
+
+        public static void Delete(UiMenu o)
+        {
+            if (o == null) return;
+            NativeToManagedMap.TryRemove(o.__Instance, var _);
+            delete o;
         }
 
         internal static UiMenu __CreateInstance(__Internal native, bool skipVTables = false)
@@ -2232,6 +2379,13 @@ namespace libui
             return __GetOrCreateInstance(native, true);
         }
 
+        public static void Delete(UiArea o)
+        {
+            if (o == null) return;
+            NativeToManagedMap.TryRemove(o.__Instance, var _);
+            delete o;
+        }
+
         internal static UiArea __CreateInstance(__Internal native, bool skipVTables = false)
         {
             return new UiArea(native, skipVTables);
@@ -2319,6 +2473,13 @@ namespace libui
         public static UiDrawContext FromInternalPtr(__IntPtr native)
         {
             return __GetOrCreateInstance(native, true);
+        }
+
+        public static void Delete(UiDrawContext o)
+        {
+            if (o == null) return;
+            NativeToManagedMap.TryRemove(o.__Instance, var _);
+            delete o;
         }
 
         internal static UiDrawContext __CreateInstance(__Internal native, bool skipVTables = false)
@@ -2410,6 +2571,13 @@ namespace libui
             return __GetOrCreateInstance(native, true);
         }
 
+        public static void Delete(UiDrawPath o)
+        {
+            if (o == null) return;
+            NativeToManagedMap.TryRemove(o.__Instance, var _);
+            delete o;
+        }
+
         internal static UiDrawPath __CreateInstance(__Internal native, bool skipVTables = false)
         {
             return new UiDrawPath(native, skipVTables);
@@ -2497,6 +2665,13 @@ namespace libui
         public static UiAttribute FromInternalPtr(__IntPtr native)
         {
             return __GetOrCreateInstance(native, true);
+        }
+
+        public static void Delete(UiAttribute o)
+        {
+            if (o == null) return;
+            NativeToManagedMap.TryRemove(o.__Instance, var _);
+            delete o;
         }
 
         internal static UiAttribute __CreateInstance(__Internal native, bool skipVTables = false)
@@ -2588,6 +2763,13 @@ namespace libui
             return __GetOrCreateInstance(native, true);
         }
 
+        public static void Delete(UiOpenTypeFeatures o)
+        {
+            if (o == null) return;
+            NativeToManagedMap.TryRemove(o.__Instance, var _);
+            delete o;
+        }
+
         internal static UiOpenTypeFeatures __CreateInstance(__Internal native, bool skipVTables = false)
         {
             return new UiOpenTypeFeatures(native, skipVTables);
@@ -2675,6 +2857,13 @@ namespace libui
         public static UiAttributedString FromInternalPtr(__IntPtr native)
         {
             return __GetOrCreateInstance(native, true);
+        }
+
+        public static void Delete(UiAttributedString o)
+        {
+            if (o == null) return;
+            NativeToManagedMap.TryRemove(o.__Instance, var _);
+            delete o;
         }
 
         internal static UiAttributedString __CreateInstance(__Internal native, bool skipVTables = false)
@@ -2766,6 +2955,13 @@ namespace libui
             return __GetOrCreateInstance(native, true);
         }
 
+        public static void Delete(UiDrawTextLayout o)
+        {
+            if (o == null) return;
+            NativeToManagedMap.TryRemove(o.__Instance, var _);
+            delete o;
+        }
+
         internal static UiDrawTextLayout __CreateInstance(__Internal native, bool skipVTables = false)
         {
             return new UiDrawTextLayout(native, skipVTables);
@@ -2853,6 +3049,13 @@ namespace libui
         public static UiFontButton FromInternalPtr(__IntPtr native)
         {
             return __GetOrCreateInstance(native, true);
+        }
+
+        public static void Delete(UiFontButton o)
+        {
+            if (o == null) return;
+            NativeToManagedMap.TryRemove(o.__Instance, var _);
+            delete o;
         }
 
         internal static UiFontButton __CreateInstance(__Internal native, bool skipVTables = false)
@@ -2944,6 +3147,13 @@ namespace libui
             return __GetOrCreateInstance(native, true);
         }
 
+        public static void Delete(UiColorButton o)
+        {
+            if (o == null) return;
+            NativeToManagedMap.TryRemove(o.__Instance, var _);
+            delete o;
+        }
+
         internal static UiColorButton __CreateInstance(__Internal native, bool skipVTables = false)
         {
             return new UiColorButton(native, skipVTables);
@@ -3031,6 +3241,13 @@ namespace libui
         public static UiForm FromInternalPtr(__IntPtr native)
         {
             return __GetOrCreateInstance(native, true);
+        }
+
+        public static void Delete(UiForm o)
+        {
+            if (o == null) return;
+            NativeToManagedMap.TryRemove(o.__Instance, var _);
+            delete o;
         }
 
         internal static UiForm __CreateInstance(__Internal native, bool skipVTables = false)
@@ -3122,6 +3339,13 @@ namespace libui
             return __GetOrCreateInstance(native, true);
         }
 
+        public static void Delete(UiGrid o)
+        {
+            if (o == null) return;
+            NativeToManagedMap.TryRemove(o.__Instance, var _);
+            delete o;
+        }
+
         internal static UiGrid __CreateInstance(__Internal native, bool skipVTables = false)
         {
             return new UiGrid(native, skipVTables);
@@ -3209,6 +3433,13 @@ namespace libui
         public static UiImage FromInternalPtr(__IntPtr native)
         {
             return __GetOrCreateInstance(native, true);
+        }
+
+        public static void Delete(UiImage o)
+        {
+            if (o == null) return;
+            NativeToManagedMap.TryRemove(o.__Instance, var _);
+            delete o;
         }
 
         internal static UiImage __CreateInstance(__Internal native, bool skipVTables = false)
@@ -3300,6 +3531,13 @@ namespace libui
             return __GetOrCreateInstance(native, true);
         }
 
+        public static void Delete(UiTableValue o)
+        {
+            if (o == null) return;
+            NativeToManagedMap.TryRemove(o.__Instance, var _);
+            delete o;
+        }
+
         internal static UiTableValue __CreateInstance(__Internal native, bool skipVTables = false)
         {
             return new UiTableValue(native, skipVTables);
@@ -3389,6 +3627,13 @@ namespace libui
             return __GetOrCreateInstance(native, true);
         }
 
+        public static void Delete(UiTableModel o)
+        {
+            if (o == null) return;
+            NativeToManagedMap.TryRemove(o.__Instance, var _);
+            delete o;
+        }
+
         internal static UiTableModel __CreateInstance(__Internal native, bool skipVTables = false)
         {
             return new UiTableModel(native, skipVTables);
@@ -3476,6 +3721,13 @@ namespace libui
         public static UiTable FromInternalPtr(__IntPtr native)
         {
             return __GetOrCreateInstance(native, true);
+        }
+
+        public static void Delete(UiTable o)
+        {
+            if (o == null) return;
+            NativeToManagedMap.TryRemove(o.__Instance, var _);
+            delete o;
         }
 
         internal static UiTable __CreateInstance(__Internal native, bool skipVTables = false)
@@ -3583,6 +3835,13 @@ namespace libui
         public static UiControl FromInternalPtr(__IntPtr native)
         {
             return __GetOrCreateInstance(native, true);
+        }
+
+        public static void Delete(UiControl o)
+        {
+            if (o == null) return;
+            NativeToManagedMap.TryRemove(o.__Instance, var _);
+            delete o;
         }
 
         internal static UiControl __CreateInstance(__Internal native, bool skipVTables = false)
@@ -3901,6 +4160,13 @@ namespace libui
             return __GetOrCreateInstance(native, true);
         }
 
+        public static void Delete(UiAreaHandler o)
+        {
+            if (o == null) return;
+            NativeToManagedMap.TryRemove(o.__Instance, var _);
+            delete o;
+        }
+
         internal static UiAreaHandler __CreateInstance(__Internal native, bool skipVTables = false)
         {
             return new UiAreaHandler(native, skipVTables);
@@ -4094,6 +4360,13 @@ namespace libui
         public static UiAreaDrawParams FromInternalPtr(__IntPtr native)
         {
             return __GetOrCreateInstance(native, true);
+        }
+
+        public static void Delete(UiAreaDrawParams o)
+        {
+            if (o == null) return;
+            NativeToManagedMap.TryRemove(o.__Instance, var _);
+            delete o;
         }
 
         internal static UiAreaDrawParams __CreateInstance(__Internal native, bool skipVTables = false)
@@ -4312,6 +4585,13 @@ namespace libui
             return __GetOrCreateInstance(native, true);
         }
 
+        public static void Delete(UiDrawMatrix o)
+        {
+            if (o == null) return;
+            NativeToManagedMap.TryRemove(o.__Instance, var _);
+            delete o;
+        }
+
         internal static UiDrawMatrix __CreateInstance(__Internal native, bool skipVTables = false)
         {
             return new UiDrawMatrix(native, skipVTables);
@@ -4518,6 +4798,13 @@ namespace libui
         public static UiDrawBrush FromInternalPtr(__IntPtr native)
         {
             return __GetOrCreateInstance(native, true);
+        }
+
+        public static void Delete(UiDrawBrush o)
+        {
+            if (o == null) return;
+            NativeToManagedMap.TryRemove(o.__Instance, var _);
+            delete o;
         }
 
         internal static UiDrawBrush __CreateInstance(__Internal native, bool skipVTables = false)
@@ -4800,6 +5087,13 @@ namespace libui
             return __GetOrCreateInstance(native, true);
         }
 
+        public static void Delete(UiDrawBrushGradientStop o)
+        {
+            if (o == null) return;
+            NativeToManagedMap.TryRemove(o.__Instance, var _);
+            delete o;
+        }
+
         internal static UiDrawBrushGradientStop __CreateInstance(__Internal native, bool skipVTables = false)
         {
             return new UiDrawBrushGradientStop(native, skipVTables);
@@ -4988,6 +5282,13 @@ namespace libui
         public static UiDrawStrokeParams FromInternalPtr(__IntPtr native)
         {
             return __GetOrCreateInstance(native, true);
+        }
+
+        public static void Delete(UiDrawStrokeParams o)
+        {
+            if (o == null) return;
+            NativeToManagedMap.TryRemove(o.__Instance, var _);
+            delete o;
         }
 
         internal static UiDrawStrokeParams __CreateInstance(__Internal native, bool skipVTables = false)
@@ -5204,6 +5505,13 @@ namespace libui
             return __GetOrCreateInstance(native, true);
         }
 
+        public static void Delete(UiFontDescriptor o)
+        {
+            if (o == null) return;
+            NativeToManagedMap.TryRemove(o.__Instance, var _);
+            delete o;
+        }
+
         internal static UiFontDescriptor __CreateInstance(__Internal native, bool skipVTables = false)
         {
             return new UiFontDescriptor(native, skipVTables);
@@ -5391,6 +5699,13 @@ namespace libui
             return __GetOrCreateInstance(native, true);
         }
 
+        public static void Delete(UiDrawTextLayoutParams o)
+        {
+            if (o == null) return;
+            NativeToManagedMap.TryRemove(o.__Instance, var _);
+            delete o;
+        }
+
         internal static UiDrawTextLayoutParams __CreateInstance(__Internal native, bool skipVTables = false)
         {
             return new UiDrawTextLayoutParams(native, skipVTables);
@@ -5570,6 +5885,13 @@ namespace libui
         public static UiAreaMouseEvent FromInternalPtr(__IntPtr native)
         {
             return __GetOrCreateInstance(native, true);
+        }
+
+        public static void Delete(UiAreaMouseEvent o)
+        {
+            if (o == null) return;
+            NativeToManagedMap.TryRemove(o.__Instance, var _);
+            delete o;
         }
 
         internal static UiAreaMouseEvent __CreateInstance(__Internal native, bool skipVTables = false)
@@ -5812,6 +6134,13 @@ namespace libui
             return __GetOrCreateInstance(native, true);
         }
 
+        public static void Delete(UiAreaKeyEvent o)
+        {
+            if (o == null) return;
+            NativeToManagedMap.TryRemove(o.__Instance, var _);
+            delete o;
+        }
+
         internal static UiAreaKeyEvent __CreateInstance(__Internal native, bool skipVTables = false)
         {
             return new UiAreaKeyEvent(native, skipVTables);
@@ -5998,6 +6327,13 @@ namespace libui
         public static UiTableModelHandler FromInternalPtr(__IntPtr native)
         {
             return __GetOrCreateInstance(native, true);
+        }
+
+        public static void Delete(UiTableModelHandler o)
+        {
+            if (o == null) return;
+            NativeToManagedMap.TryRemove(o.__Instance, var _);
+            delete o;
         }
 
         internal static UiTableModelHandler __CreateInstance(__Internal native, bool skipVTables = false)
@@ -6220,6 +6556,13 @@ namespace libui
             return __GetOrCreateInstance(native, true);
         }
 
+        public static void Delete(UiTableTextColumnOptionalParams o)
+        {
+            if (o == null) return;
+            NativeToManagedMap.TryRemove(o.__Instance, var _);
+            delete o;
+        }
+
         internal static UiTableTextColumnOptionalParams __CreateInstance(__Internal native, bool skipVTables = false)
         {
             return new UiTableTextColumnOptionalParams(native, skipVTables);
@@ -6357,6 +6700,13 @@ namespace libui
         public static UiTableParams FromInternalPtr(__IntPtr native)
         {
             return __GetOrCreateInstance(native, true);
+        }
+
+        public static void Delete(UiTableParams o)
+        {
+            if (o == null) return;
+            NativeToManagedMap.TryRemove(o.__Instance, var _);
+            delete o;
         }
 
         internal static UiTableParams __CreateInstance(__Internal native, bool skipVTables = false)
@@ -6511,6 +6861,13 @@ namespace libui
         public static UiTableSelection FromInternalPtr(__IntPtr native)
         {
             return __GetOrCreateInstance(native, true);
+        }
+
+        public static void Delete(UiTableSelection o)
+        {
+            if (o == null) return;
+            NativeToManagedMap.TryRemove(o.__Instance, var _);
+            delete o;
         }
 
         internal static UiTableSelection __CreateInstance(__Internal native, bool skipVTables = false)

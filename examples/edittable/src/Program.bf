@@ -90,6 +90,7 @@ class Program
     static __IntPtr ModelCellValue(__IntPtr mh, __IntPtr m, int32 row, int32 column)
     {
         UiTableValue ret = null;
+        defer UiTableValue.Delete(ret);
         switch ((MCOL)column)
         {
             case MCOL.MCOL_ROWXX:
