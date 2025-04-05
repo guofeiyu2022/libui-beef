@@ -20,8 +20,7 @@ class Program
 
     static int Main()
     {
-        var o = scope UiInitOptions();
-        var err = ui.UiInit(o);
+        let err = ui.UiInit(scope .());
         if (err != null) {
             Console.Error.WriteLine("Error initializing libui-ng: {0}", scope String(err));
             ui.UiFreeInitError(err);
@@ -30,7 +29,7 @@ class Program
         defer ui.UiUninit();
 
         // Create a new window
-        var w = ui.UiNewWindow("Hello World!", 300, 200, 0);
+        let w = ui.UiNewWindow("Hello World!", 300, 200, 0);
         ui.UiWindowOnClosing(w, scope => OnClosing, null);
 
         ui.UiControlShow((UiControl)w);
